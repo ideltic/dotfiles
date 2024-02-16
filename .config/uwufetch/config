@@ -1,0 +1,13 @@
+\distro=Arch
+user=true
+os=true
+host=true
+kernel=true
+cpu=false
+gpu=false
+ram=false
+resolution=true
+shell=true
+pkgs=false
+uptime=true
+colors=true
