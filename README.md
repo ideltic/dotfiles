@@ -1,5 +1,5 @@
 # dotfiles
 
-attempt #2 at creating a dotfiles repo
+repo for my dotfiles :3
 
-hopefully it works this time :3
+pretty self explanatory
