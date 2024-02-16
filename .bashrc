@@ -4,13 +4,10 @@ neofetch
 
 # random aliases
 alias gae='clear && hyfetch'
-alias hyfetch='clear && hyfetch'
 alias meow='cat ~/Documents/meow'
 alias neofetch='clear && neofetch'
 alias ner='nerdfetch'
 alias nf='clear && neofetch'
-alias palyerlist="echo 'L'"
-alias playerlist="echo 'this isnt discord dumbass'"
 alias uwu="clear && uwufetch"
 alias :3="echo ':3'"
 
