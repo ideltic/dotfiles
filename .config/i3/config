@@ -253,6 +253,10 @@ bindsym XF86AudioStop exec --no-startup-id playerctl stop
 bindsym XF86AudioNext exec --no-startup-id playerctl next
 bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 
+# adjust brightness with brightnessctl
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5%
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
+
 
 # capture screenshots using flameshot
 
@@ -262,6 +266,10 @@ exec --no-startup-id flameshot &
 bindsym $sup+Shift+Print exec --no-startup-id flameshot gui
 # capture full screen
 bindsym Shift+Print exec --no-startup-id flameshot screen
+
+
+# open file manager (thunar)
+bindsym $sup+e exec --no-startup-id thunar
 
 
 # enables picom compositor (transparency, animations, shadows)
@@ -274,5 +282,5 @@ exec_always --no-startup-id feh --bg-fill ~/Pictures/backgrounds/foggy-peaks-val
 exec_always --no-startup-id /usr/bin/dunst
 
 # auto-mount devices such as USBs when plugged in
-exec_always --no-startup-id udiskie -ns --file-manager dolphin
+exec_always --no-startup-id udiskie -ns --file-manager thunar
 
