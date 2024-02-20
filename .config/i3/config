@@ -192,7 +192,7 @@ bindsym $mod+r mode "resize"
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 # Set gaps between windows
-gaps inner 8
+gaps inner 10
 gaps outer 2
 
 # Smart borders; only draw borders if number of windows = >1
@@ -204,17 +204,6 @@ default_floating_border pixel 2
 
 
 # 	Plasma compatibility section
-
-
-# # Screenshots
-# bindsym Shift+Print exec --no-startup-id maim "/home/$USER/Pictures/$(date)"
-# bindsym $mod+Print exec --no-startup-id maim --window $(xdotool getactivewindow) "/home/$USER/Pictures/$(date)"
-# bindsym $mod+Shift+Print exec --no-startup-id maim --select "/home/$USER/Pictures/$(date)"
-# 
-# # Clipboard Screenshots
-# bindsym Ctrl+Print exec --no-startup-id maim | xclip -selection clipboard -t image/png
-# bindsym Ctrl+$mod+Print exec --no-startup-id maim --window $(xdotool getactivewindow) | xclip -selection clipboard -t image/png
-# bindsym Ctrl+Shift+Print exec --no-startup-id maim --select | xclip -selection clipboard -t image/png
 
 
 for_window [window_role="About"] floating enable
@@ -247,17 +236,33 @@ for_window [title="Desktop @ QRect.*"] kill; floating enable; border none
 # use plasma logout screen instead of i3
 # bindsym $mod+Shift+e exec --no-startup-id qdbus-qt5 org.kde.ksmserver /KSMServer org.kde.KSMServerInterface.logout -1 -1 -1
 
-# control volume via DBus
-bindsym XF86AudioRaiseVolume exec --no-startup-id qdbus org.kde.kglobalaccel /component/kmix invokeShortcut "increase_volume"
-bindsym XF86AudioLowerVolume exec --no-startup-id qdbus org.kde.kglobalaccel /component/kmix invokeShortcut "decrease_volume"
-bindsym XF86AudioMute exec --no-startup-id qdbus org.kde.kglobalaccel /component/kmix invokeShortcut "mute"
-bindsym XF86AudioMicMute exec --no-startup-id qdbus org.kde.kglobalaccel /component/kmix invokeShortcut "mic_mute"
+# # control volume (kde compatible (ew))
+# bindsym XF86AudioRaiseVolume exec --no-startup-id qdbus org.kde.kglobalaccel /component/kmix invokeShortcut "increase_volume"
+# bindsym XF86AudioLowerVolume exec --no-startup-id qdbus org.kde.kglobalaccel /component/kmix invokeShortcut "decrease_volume"
+# bindsym XF86AudioMute exec --no-startup-id qdbus org.kde.kglobalaccel /component/kmix invokeShortcut "mute"
+# bindsym XF86AudioMicMute exec --no-startup-id qdbus org.kde.kglobalaccel /component/kmix invokeShortcut "mic_mute"
+
+# adjust volume using pamixer (pipewire)
+bindsym XF86AudioRaiseVolume exec --no-startup-id pamixer --increase 5
+bindsym XF86AudioLowerVolume exec --no-startup-id pamixer --decrease 5
+bindsym XF86AudioMute exec --no-startup-id pamixer -t
 
 # control playing media
 bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
 bindsym XF86AudioStop exec --no-startup-id playerctl stop
 bindsym XF86AudioNext exec --no-startup-id playerctl next
 bindsym XF86AudioPrev exec --no-startup-id playerctl previous
+
+
+# capture screenshots using flameshot
+
+# set to run in background
+exec --no-startup-id flameshot &
+# manual capture (click and drag)
+bindsym $sup+Shift+Print exec --no-startup-id flameshot gui
+# capture full screen
+bindsym Shift+Print exec --no-startup-id flameshot screen
+
 
 # enables picom compositor (transparency, animations, shadows)
 exec_always --no-startup-id picom -cbf --config ~/.config/picom/picom.conf
