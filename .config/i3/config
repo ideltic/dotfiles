@@ -259,7 +259,6 @@ bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
 
 
 # capture screenshots using flameshot
-
 # set to run in background
 exec --no-startup-id flameshot &
 # manual capture (click and drag)
@@ -283,4 +282,10 @@ exec_always --no-startup-id /usr/bin/dunst
 
 # auto-mount devices such as USBs when plugged in
 exec_always --no-startup-id udiskie -ns --file-manager thunar
+
+# enables touchpad while typing (for mc lmao)
+exec_always --no-startup-id xinput set-prop 14 "libinput Disable While Typing Enabled" 0
+# improves right clicking? i guess [wip]
+# exec_always --no-startup-id xinput set-prop 14 "libinput Tapping Button Mapping Enabled" 1, 1
+
 
