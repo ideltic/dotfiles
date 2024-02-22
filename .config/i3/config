@@ -1,4 +1,4 @@
-# import catppuccin :3
+# import i3 catppuccin :3
 include ~/.config/i3/i3-catppuccin
 
 # Mod1 = alt; Mod4 = meta key
