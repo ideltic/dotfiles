@@ -1,29 +1,13 @@
 # import catppuccin :3
 include ~/.config/i3/i3-catppuccin
 
-# Should you change your keyboard layout some time, delete
-# this file and re-run i3-config-wizard(1).
-
-# Please see https://i3wm.org/docs/userguide.html for a complete reference!
-
 # Mod1 = alt; Mod4 = meta key
 set $mod Mod1
 set $sup Mod4
 
-# Font for window titles. Will also be used by the bar unless a different font
-# is used in the bar {} block below.
-font pango:monospace 8
-
-# This font is widely installed, provides lots of unicode glyphs, right-to-left
-# text rendering and scalability on retina/hidpi displays (thanks to pango).
-#font pango:DejaVu Sans Mono 8
-
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id dex --autostart --environment i3
-
-# The combination of xss-lock, nm-applet and pactl is a popular choice, so
-# they are included here as an example. Modify as you see fit.
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
@@ -33,20 +17,10 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 
-# Use pactl to adjust volume in PulseAudio.
-# Disabled; see Plasma Compatibility section
-
-set $refresh_i3status killall -SIGUSR1 i3status
-# bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
-# bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
-# bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
-# bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
-
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-# move tiling windows via drag & drop by left-clicking into the title bar,
-# or left-clicking anywhere into the window while holding the floating modifier.
+# move tiling windows via drag & drop by left-clicking anywhere into the window while holding the floating modifier.
 tiling_drag modifier titlebar
 
 # start a terminal
@@ -54,9 +28,6 @@ bindsym $mod+Return exec kitty
 
 # kill focused window
 bindsym $mod+Shift+q kill
-
-# start dmenu (a program launcher)
-# bindsym $mod+d exec --no-startup-id dmenu_run
 
 # start rofi (replacement for dmenu)
 bindsym $mod+space exec --no-startup-id rofi -show drun -run-command "i3-msg exec '{cmd}'" -show-icons
@@ -157,7 +128,6 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-# bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 bindsym $mod+Shift+e exec "rofi -show power-menu -modi power-menu:rofi-power-menu"
 
 # resize window (you can also use the mouse for that)
@@ -188,59 +158,15 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Start Polybar to display a workspace bar bc i3status is ugly as shit
-
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 # Set gaps between windows
 gaps inner 10
 gaps outer 2
 
-# Smart borders; only draw borders if number of windows = >1
-# smart_borders on
-
 # Sets a border around windows, eliminating title bars
 default_border pixel 2
 default_floating_border pixel 2
-
-
-# 	Plasma compatibility section
-
-
-for_window [window_role="About"] floating enable
-for_window [window_role="bubble"] floating enable
-for_window [window_role="dialog"] floating enable
-for_window [window_role="menu"] floating enable
-for_window [window_role="pop-up"] floating enable
-for_window [window_role="Preferences"] floating enable
-for_window [window_role="task_dialog"] floating enable
-
-for_window [instance="__scratchpad"] floating enable
-
-for_window [class="yakuake"] floating enable
-for_window [class="systemsettings"] floating enable
-for_window [class="plasmashell"] floating enable;
-for_window [class="plasmashell" window_type="notification"] border none, move position 1450px 20px
-for_window [class="Plasma"] floating enable; border none
-for_window [class="krunner"] floating enable; border none
-for_window [class="Kmix"] floating enable; border none
-for_window [class="Klipper"] floating enable; border none
-for_window [class="Plasmoidviewer"] floating enable; border none
-for_window [class="(?i)*nextcloud*"] floating disable
-no_focus [class="plasmashell" window_type="notification"]
-
-for_window [title="plasma-desktop"] floating enable; border none
-for_window [title="win7"] floating enable; border none
-for_window [title="Desktop @ QRect.*"] kill; floating enable; border none
-
-
-# use plasma logout screen instead of i3
-# bindsym $mod+Shift+e exec --no-startup-id qdbus-qt5 org.kde.ksmserver /KSMServer org.kde.KSMServerInterface.logout -1 -1 -1
-
-# # control volume (kde compatible (ew))
-# bindsym XF86AudioRaiseVolume exec --no-startup-id qdbus org.kde.kglobalaccel /component/kmix invokeShortcut "increase_volume"
-# bindsym XF86AudioLowerVolume exec --no-startup-id qdbus org.kde.kglobalaccel /component/kmix invokeShortcut "decrease_volume"
-# bindsym XF86AudioMute exec --no-startup-id qdbus org.kde.kglobalaccel /component/kmix invokeShortcut "mute"
-# bindsym XF86AudioMicMute exec --no-startup-id qdbus org.kde.kglobalaccel /component/kmix invokeShortcut "mic_mute"
 
 # adjust volume using pamixer (pipewire)
 bindsym XF86AudioRaiseVolume exec --no-startup-id pamixer --increase 5
@@ -285,7 +211,3 @@ exec_always --no-startup-id udiskie -ns --file-manager thunar
 
 # enables touchpad while typing (for mc lmao)
 exec_always --no-startup-id xinput set-prop 14 "libinput Disable While Typing Enabled" 0
-# improves right clicking? i guess [wip]
-# exec_always --no-startup-id xinput set-prop 14 "libinput Tapping Button Mapping Enabled" 1, 1
-
-
