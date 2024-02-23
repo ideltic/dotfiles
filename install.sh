@@ -3,7 +3,8 @@
 echo "This script assumes that you are using a nvidia GPU, and do not have yay installed."
 sleep 4
 echo "Beginning installation..."
-sleep 1
+sleep 2
+cd
 
 # yay installation
 sudo pacman -Syu --noconfirm --needed base-devel git
@@ -54,6 +55,10 @@ ln -sf ~/.dotfiles/fonts ~/.local/share/fonts
 sleep 1
 
 echo "Symlinking complete.
-..."
+Beginning the catppuccinification..."
 
-# [CHANGE THIS] sudo echo "QT5_QPA_PLATFORMTHEME=qt5ct" > /etc/enviroment
+sleep 4
+
+
+
+# [CHANGE THIS] sudo echo "QT5_QPA_PLATFORMTHEME=qt5ct" >> ~/.profile
