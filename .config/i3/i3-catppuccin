@@ -33,20 +33,3 @@ client.unfocused         $overlay0 $base $text      $rosewater $overlay0
 client.urgent            $red      $base $rosewater $overlay0  $red
 client.placeholder       $overlay0 $base $text      $overlay0  $overlay0
 client.background        $base
-
-# bar
-# bar {
-#   colors {
-#     background         $base
-#     statusline         $text
-#     focused_statusline $text
-#     focused_separator  $base
-#     focused_workspace  $base $base $pink
-#     active_workspace   $base $base $overlay1
-#     inactive_workspace $base $base $surface1
-#     urgent_workspace   $base $base $surface1
-#     binding_mode       $base $base $surface1
-#   }
-# }
-
-# this is all exported to i3 config
