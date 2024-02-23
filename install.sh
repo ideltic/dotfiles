@@ -54,11 +54,17 @@ ln -sf ~/.dotfiles/fonts ~/.local/share/fonts
 
 sleep 1
 
+cd ~
 echo "Symlinking complete.
-Beginning the catppuccinification..."
+Beginning the catppuccin-ification..."
 
 sleep 4
 
+mkdir -v ~/ctp-tempdir && cd ~/ctp-tempdir
 
+git clone https://github.com/catppuccin/plymouth
+git clone https://github.com/catppuccin/sddm
+git clone https://github.com/catppuccin/grub
+git clone https://github.com/catppuccin/tty
 
 # [CHANGE THIS] sudo echo "QT5_QPA_PLATFORMTHEME=qt5ct" >> ~/.profile
