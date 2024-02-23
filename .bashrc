@@ -1,5 +1,6 @@
 eval "$(starship init bash)"
 export PATH="$PATH:$HOME/.cargo/bin"
+export GTK_THEME='Catppuccin-Macchiato-Standard-Pink-Dark:dark'
 
 neofetch
 
