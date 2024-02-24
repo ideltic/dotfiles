@@ -1,6 +1,3 @@
-# Use Mouse+$mod to drag floating windows to their wanted position
-floating_modifier $mod
-
 # move tiling windows via drag & drop by left-clicking anywhere into the window while holding the floating modifier.
 tiling_drag modifier titlebar
 

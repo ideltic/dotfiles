@@ -10,6 +10,9 @@ include ~/.config/i3/startup
 set $mod Mod1
 set $sup Mod4
 
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 

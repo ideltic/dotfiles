@@ -1,6 +1,6 @@
 # adjust volume using pamixer (pipewire)
-bindsym XF86AudioRaiseVolume exec --no-startup-id pamixer --increase 5
-bindsym XF86AudioLowerVolume exec --no-startup-id pamixer --decrease 5
+bindsym XF86AudioRaiseVolume exec --no-startup-id pamixer --unmute --increase 5
+bindsym XF86AudioLowerVolume exec --no-startup-id pamixer --unmute --decrease 5
 bindsym XF86AudioMute exec --no-startup-id pamixer -t
 
 # control playing media
