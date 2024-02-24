@@ -8,4 +8,4 @@ pretty self explanatory
 
 ## installation
 
-**DO NOT USE THE INSTALL SCRIPT YET!** it is *far* from ready for usage at the moment, i would strongly recommend installing and symlinking everything manually until the script is finished
+install script is not ready for usage at this time
