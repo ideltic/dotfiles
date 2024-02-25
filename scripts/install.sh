@@ -18,13 +18,13 @@ function yay_install {
      echo -ne "Installing yay...\r" && sleep 1 && echo
 
      #sudo pacman -Syu --noconfirm --needed base-devel git
-     #git clone https://aur.archlinux.org/yay.git $HOME/yay && cd $HOME/yay
+     #git clone https://aur.archlinux.org/yay.git /home/$USER/yay && cd /home/$USER/yay
      #makepkg -si
      #cd ..
-     #rm -rf $HOME/yay
+     #rm -rf /home/$USER/yay
 
      echo
-     echo "${GREEN}Yay successfully installed."
+     echo -e "${GREEN}${bold}Yay successfully installed.${TEXT}${normal}"
      sleep 3 && echo
 } 
 
@@ -33,11 +33,11 @@ function package_install {
      echo -ne "Installing needed packages..\r" && sleep 1
      echo -ne "Installing needed packages...\r" && sleep 1 && echo
 
-     #sudo pacman -S --noconfirm --needed bitwarden bottom brightnessctl code discord dunst feh firefox flameshot hyfetch i3 kitty neofetch pamixer picom pipewire pipewire-audio pipewire-pulse plymouth lib32-pipewire neovim p7zip playerctl polybar rofi rofi-emoji sddm starship thunar udiskie uwufetch xdg-user-dirs xf86-input-libinput xf86-video-nouveau xorg-apps xorg-server xorg-xinput
-     #yay -S --noconfirm --needed prismlauncher-qt5-bin rofi-greenclip rofi-power-menu slack-desktop ttf-twemoji
+     #yes all | sudo pacman -S --noconfirm --needed bitwarden bottom brightnessctl code discord dunst feh firefox flameshot hyfetch i3-wm i3lock kitty neofetch pamixer picom pipewire pipewire-audio pipewire-pulse plymouth lib32-pipewire neovim p7zip playerctl polybar rofi rofi-emoji sddm starship thunar udiskie uwufetch xdg-user-dirs xf86-input-libinput xf86-video-nouveau xorg-apps xorg-server xorg-xinput
+     #None | yay -S --noconfirm --needed prismlauncher-qt5-bin rofi-greenclip rofi-power-menu slack-desktop ttf-twemoji
      
      echo
-     echo "${GREEN}Package installation complete."
+     echo -e "${GREEN}${bold}Package installation complete.${TEXT}${normal}"
      sleep 3 && echo
 }
 
@@ -51,24 +51,24 @@ function symlinks {
      #cd ~/.dotfiles && rm -rfv ~/dotfiles
 
      # symlinking new configurations
-     #rm -rfv ~/.config/dunst && ln -sf ~/.dotfiles/.config/dunst ~/.config/ && sleep 0.1
-     #rm -rfv ~/.config/flameshot && ln -sf ~/.dotfiles/.config/flameshot ~/.config/ && sleep 0.1
-     #rm -rfv ~/.config/hyfetch.json && ln -sf ~/.dotfiles/.config/hyfetch.json ~/.config/ && sleep 0.1
-     #rm -rfv ~/.config/i3 && ln -sf ~/.dotfiles/.config/i3 ~/.config/ && sleep 0.1
-     #rm -rfv ~/.config/kitty && ln -sf ~/.dotfiles/.config/kitty ~/.config/ && sleep 0.1
-     #rm -rfv ~/.config/neofetch && ln -sf /.dotfiles/.config/neofetch ~/.config/ && sleep 0.1
-     #rm -rfv ~/.config/picom && ln -sf ~/.dotfiles/.config/picom ~/.config/ && sleep 0.1
-     #rm -rfv ~/.config/polybar && ln -sf ~/.dotfiles/.config/polybar ~/.config/ && sleep 0.1
-     #rm -rfv ~/.config/rofi && ln -sf ~/.dotfiles/.config/rofi ~/.config/ && sleep 0.1
-     #rm -rfv ~/.config/starship.toml && ln -sf ~/.dotfiles/.config/starship.toml ~/.config/ && sleep 0.1
-     #rm -rfv ~/.config/uwufetch && ln -sf ~/.dotfiles/.config/uwufetch ~/.config/ && sleep 0.1
-     #rm -fv ~/.bashrc && ln -sf ~/.dotfiles/.bashrc ~/.bashrc && sleep 0.1
-     #mkdir -pv ~/Pictures/backgrounds && ln -sf ~/.dotfiles/backgrounds ~/Pictures/backgrounds && sleep 0.1
-     #ln -sf ~/.dotfiles/fonts ~/.local/share/fonts
+     #rm -rfv ~/.config/dunst && ln -sfv ~/.dotfiles/.config/dunst ~/.config/ && sleep 0.1
+     #rm -rfv ~/.config/flameshot && ln -sfv ~/.dotfiles/.config/flameshot ~/.config/ && sleep 0.1
+     #rm -rfv ~/.config/hyfetch.json && ln -sfv ~/.dotfiles/.config/hyfetch.json ~/.config/ && sleep 0.1
+     #rm -rfv ~/.config/i3 && ln -sfv ~/.dotfiles/.config/i3 ~/.config/ && sleep 0.1
+     #rm -rfv ~/.config/kitty && ln -sfv ~/.dotfiles/.config/kitty ~/.config/ && sleep 0.1
+     #rm -rfv ~/.config/neofetch && ln -sfv /.dotfiles/.config/neofetch ~/.config/ && sleep 0.1
+     #rm -rfv ~/.config/picom && ln -sfv ~/.dotfiles/.config/picom ~/.config/ && sleep 0.1
+     #rm -rfv ~/.config/polybar && ln -sfv ~/.dotfiles/.config/polybar ~/.config/ && sleep 0.1
+     #rm -rfv ~/.config/rofi && ln -sfv ~/.dotfiles/.config/rofi ~/.config/ && sleep 0.1
+     #rm -rfv ~/.config/starship.toml && ln -sfv ~/.dotfiles/.config/starship.toml ~/.config/ && sleep 0.1
+     #rm -rfv ~/.config/uwufetch && ln -sfv ~/.dotfiles/.config/uwufetch ~/.config/ && sleep 0.1
+     #rm -fv ~/.bashrc && ln -sfv ~/.dotfiles/.bashrc ~/.bashrc && sleep 0.1
+     #mkdir -pv ~/Pictures/backgrounds && ln -sfv ~/.dotfiles/backgrounds ~/Pictures/backgrounds && sleep 0.1
+     #ln -sfv ~/.dotfiles/fonts ~/.local/share/fonts
 
      cd ~
      echo
-     echo "${GREEN}Symlinking complete."
+     echo -e "${GREEN}${bold}Symlinking complete.${TEXT}${normal}"
      sleep 3 && echo
 }
 
@@ -81,7 +81,7 @@ function catppuccinify {
      # git clones go here
      
      echo
-     echo "${GREEN}Catppuccin-ification complete."
+     echo -e "${GREEN}${bold}Catppuccin-ification complete.${TEXT}${normal}"
      sleep 3 && echo
 }
 
@@ -100,7 +100,8 @@ echo -e "${PINK}${bold}
       ____) | |____   | |  | |__| | |           
      |_____/|______|  |_|   \____/|_|           
 ${normal}${TEXT}
-"
+" && sleep 0.1
+echo -e "          ${bold}${CYAN}---===${PINK}=====${WHITE}=====${PINK}=====${CYAN}===---" && echo
 echo -e "${WHITE}${bold}'Natalie Setup' by Natalie :3 (https://github.com/ideltic)" && echo
 echo -e "${TEXT}${normal}Running this script will install, configure, and then apply the Catppuccin theme to all necessary packages." && echo
 
