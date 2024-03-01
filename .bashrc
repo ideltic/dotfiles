@@ -22,6 +22,7 @@ alias e='exit'
 alias evening="bash ~/projects/scripts/feh-eveningrush.sh"
 alias foggy="bash ~/projects/scripts/feh-foggy-peaks-valley-ctp.sh"
 alias fuji="bash ~/projects/scripts/feh-fuji.sh"
+alias sysrq="cat /proc/sys/kernel/sysrq"
 alias vencordinstall="bash ~/projects/scripts/vencordinstall.sh"
 alias vim='nvim'
 alias update="sudo pacman -Syu"
