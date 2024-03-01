@@ -2,7 +2,7 @@
 exec_always --no-startup-id picom -cbf --config ~/.config/picom/picom.conf
 
 # sets wallpaper
-exec_always --no-startup-id feh --bg-fill ~/Pictures/backgrounds/foggy-peaks-valley-ctp.png
+exec_always --no-startup-id feh --bg-fill ~/Pictures/backgrounds/peaks.png
 
 # starts notification daemon (dunst)
 exec_always --no-startup-id /usr/bin/dunst
