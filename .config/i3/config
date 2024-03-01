@@ -1,3 +1,7 @@
+# Mod1 = alt; Mod4 = meta
+set $mod Mod1
+set $sup Mod4
+
 include ~/.config/i3/keybinds/focused
 include ~/.config/i3/keybinds/media
 include ~/.config/i3/keybinds/programs
@@ -5,10 +9,6 @@ include ~/.config/i3/keybinds/resize
 include ~/.config/i3/keybinds/workspaces
 include ~/.config/i3/i3-catppuccin
 include ~/.config/i3/startup
-
-# Mod1 = alt; Mod4 = meta
-set $mod Mod1
-set $sup Mod4
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod

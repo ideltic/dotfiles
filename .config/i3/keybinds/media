@@ -1,7 +1,7 @@
 # adjust volume using pamixer (pipewire)
-bindsym XF86AudioRaiseVolume exec --no-startup-id pamixer --unmute --increase 5
-bindsym XF86AudioLowerVolume exec --no-startup-id pamixer --unmute --decrease 5
-bindsym XF86AudioMute exec --no-startup-id pamixer -t
+bindsym XF86AudioRaiseVolume exec --no-startup-id bash $HOME/.dotfiles/.config/i3/keybinds/volume.sh up
+bindsym XF86AudioLowerVolume exec --no-startup-id bash $HOME/.dotfiles/.config/i3/keybinds/volume.sh down
+bindsym XF86AudioMute exec --no-startup-id bash $HOME/.dotfiles/.config/i3/keybinds/volume.sh mute
 
 # control playing media
 bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
