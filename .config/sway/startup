@@ -1,0 +1,32 @@
+# enables picom compositor (transparency, animations, shadows)
+exec_always --no-startup-id picom -cbf --config ~/.config/picom/picom.conf
+
+# sets wallpaper
+exec_always --no-startup-id feh --bg-fill ~/Pictures/backgrounds/peaks.png
+
+# starts notification daemon (dunst)
+exec_always --no-startup-id /usr/bin/dunst
+
+# auto-mount devices such as USBs when plugged in
+exec_always --no-startup-id udiskie -ns --file-manager thunar
+
+# enables touchpad while typing (for mc lmao)
+exec_always --no-startup-id xinput set-prop 14 "libinput Disable While Typing Enabled" 0
+
+# launches polybar
+exec_always --no-startup-id ~/.config/polybar/launch.sh
+
+# set flameshot (screenshot tool) to run in background
+exec --no-startup-id flameshot &
+
+# starts clipboard daemon
+exec --no-startup-id greenclip daemon > dev/null
+
+# xdg autostart
+exec --no-startup-id dex --autostart --environment i3
+
+# xss-lock (screen locker)
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+
+# starts nm applet
+exec --no-startup-id nm-applet

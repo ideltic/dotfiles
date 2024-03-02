@@ -1,0 +1,34 @@
+# Mod1 = alt; Mod4 = meta
+set $mod Mod1
+set $sup Mod4
+
+include ~/.config/i3/keybinds/focused
+include ~/.config/i3/keybinds/media
+include ~/.config/i3/keybinds/programs
+include ~/.config/i3/keybinds/resize
+include ~/.config/i3/keybinds/workspaces
+include ~/.config/i3/i3-catppuccin
+include ~/.config/i3/startup
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+# reload the configuration file
+bindsym $mod+Shift+c reload
+
+# reload i3
+bindsym $mod+Shift+r restart
+# exit i3 (logs you out of your X session)
+bindsym $mod+Shift+e exec "rofi -show power-menu -modi power-menu:rofi-power-menu"
+
+# set gaps between windows
+gaps inner 10
+gaps outer 2
+
+# sets a border around windows, eliminating title bars
+default_border pixel 2
+default_floating_border pixel 2
+
+input "SynPS/2 Synaptics TouchPad" {
+    tap enabled
+}
