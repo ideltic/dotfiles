@@ -1,7 +1,7 @@
 # adjust volume using pamixer (pipewire)
-bindsym XF86AudioRaiseVolume exec --no-startup-id bash $HOME/.dotfiles/.config/sway/volume.sh up
-bindsym XF86AudioLowerVolume exec --no-startup-id bash $HOME/.dotfiles/.config/sway/volume.sh down
-bindsym XF86AudioMute exec --no-startup-id bash $HOME/.dotfiles/.config/sway/volume.sh mute
+bindsym XF86AudioRaiseVolume exec --no-startup-id bash $HOME/.config/sh/volume.sh up
+bindsym XF86AudioLowerVolume exec --no-startup-id bash $HOME/.config/sh/volume.sh down
+bindsym XF86AudioMute exec --no-startup-id bash $HOME/.config/sh/volume.sh mute
 
 # control playing media
 bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause

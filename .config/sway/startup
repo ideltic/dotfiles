@@ -1,0 +1,3 @@
+# wbg goes here
+
+exec_always --no-startup-id wbg ~/Pictures/backgrounds/peaks.png

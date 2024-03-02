@@ -5,10 +5,18 @@ bindsym $sup+e exec --no-startup-id thunar
 bindsym $mod+Return exec kitty
 
 # start rofi
-bindsym $mod+space exec --no-startup-id rofi -show drun -run-command "i3-msg exec '{cmd}'" -show-icons -font "Hack Nerd Font 14"
+bindsym $mod+space exec --no-startup-id rofi -show drun -run-command "swaymsg exec '{cmd}'" -show-icons -font "Hack Nerd Font 14"
 
 # rofi clipboard tool
 bindsym $mod+c exec --no-startup-id rofi -modi "clipboard:greenclip print" -show clipboard
 
 # rofi emoji picker
 bindsym $sup+period exec --no-startup-id rofi -modi emoji -show emoji -emoji-mode copy
+
+# sway scratchpad
+bindsym $mod+Shift+minus move scratchpad
+bindsym $mod+minus scratchpad show
+# move minimized windows into scratchpad (enable|disable)
+scratchpad_minimize disable
+
+# capture screenshots using swayshot
