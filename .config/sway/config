@@ -8,30 +8,16 @@ set $down j
 set $up k
 set $right l
 
-include $HOME/.config/sway/appearance/catppuccin
-include $HOME/.config/sway/appearance/window
+floating_modifier $mod normal
 
-include $HOME/.config/sway/keybinds/focus
-include $HOME/.config/sway/keybinds/layout
-include $HOME/.config/sway/keybinds/media
-include $HOME/.config/sway/keybinds/programs
-include $HOME/.config/sway/keybinds/resize
-include $HOME/.config/sway/keybinds/workspaces
+# Reload the configuration file
+bindsym $mod+Shift+Shift+c reload
 
-include $HOME/.config/sway/startup
-include $HOME/.config/sway/input
-
-
-    floating_modifier $mod normal
-
-    # Reload the configuration file
-    bindsym $mod+Shift+c reload
-
-    # Exit sway (logs you out of your Wayland session)
-    bindsym $sup+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'.
+# Exit sway (logs you out of your Wayland session)
+bindsym $sup+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'.
 #
 # Status Bar:
-# REPLACE THIS WITH WAYBAR!!!!!!!!
+# REPLACE THIS WITH IRONBAR!!!!!!!!
 bar {
     position bottom
 
@@ -45,5 +31,18 @@ bar {
         inactive_workspace #1e2030 #1e2030 #cad3f5
     }
 }
+
+include $HOME/.config/sway/appearance/catppuccin
+include $HOME/.config/sway/appearance/window
+
+include $HOME/.config/sway/keybinds/focus
+include $HOME/.config/sway/keybinds/layout
+include $HOME/.config/sway/keybinds/media
+include $HOME/.config/sway/keybinds/programs
+include $HOME/.config/sway/keybinds/resize
+include $HOME/.config/sway/keybinds/workspaces
+
+include $HOME/.config/sway/startup
+include $HOME/.config/sway/input
 
 include /etc/sway/config.d/*
