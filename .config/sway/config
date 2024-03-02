@@ -15,22 +15,7 @@ bindsym $mod+Shift+Shift+c reload
 
 # Exit sway (logs you out of your Wayland session)
 bindsym $sup+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'.
-#
-# Status Bar:
-# REPLACE THIS WITH IRONBAR!!!!!!!!
-bar {
-    position bottom
 
-    # When the status_command prints a new line to stdout, swaybar updates.
-    # The default just shows the current date and time.
-    status_command while date +'%Y-%m-%d %I:%M:%S %p'; do sleep 1; done
-
-    colors {
-        statusline #cad3f5
-        background #24273a
-        inactive_workspace #1e2030 #1e2030 #cad3f5
-    }
-}
 
 include $HOME/.config/sway/appearance/catppuccin
 include $HOME/.config/sway/appearance/window

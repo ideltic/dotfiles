@@ -1,3 +1,5 @@
-# wbg goes here
-
+# use wbg to set a wallpaper
 exec_always --no-startup-id wbg ~/Pictures/backgrounds/peaks.png
+
+# launches ironbar
+exec_always --no-startup-id ironbar
