@@ -33,7 +33,7 @@ function package_install {
      echo -ne "Installing needed packages..\r" && sleep 1
      echo -ne "Installing needed packages...\r" && sleep 1 && echo
 
-     #yes all | sudo pacman -S --noconfirm --needed bitwarden bottom brightnessctl code discord dunst feh firefox flameshot hyfetch i3-wm i3lock kitty neofetch pamixer picom pipewire pipewire-audio pipewire-pulse plymouth lib32-pipewire neovim p7zip playerctl polybar rofi rofi-emoji sddm starship thunar udiskie uwufetch xdg-user-dirs xf86-input-libinput xf86-video-nouveau xorg-apps xorg-server xorg-xinput
+     #yes all | sudo pacman -S --noconfirm --needed bitwarden bottom brightnessctl code discord dunst feh firefox flameshot hyfetch i3-wm i3lock kitty neofetch pamixer picom pipewire pipewire-audio pipewire-pulse plymouth neovim p7zip playerctl polybar rofi rofi-emoji sddm starship thunar udiskie uwufetch xdg-user-dirs xf86-input-libinput xf86-video-nouveau xorg-apps xorg-server xorg-xinput
      #None | yay -S --noconfirm --needed prismlauncher-qt5-bin rofi-greenclip rofi-power-menu slack-desktop ttf-twemoji
      
      echo
@@ -121,7 +121,7 @@ echo -e "${PINK}${bold}
 ${normal}${TEXT}
 " && sleep 0.1
 echo -e "          ${bold}${CYAN}---===${PINK}=====${WHITE}=====${PINK}=====${CYAN}===---" && echo
-echo -e "${WHITE}${bold}'Natalie Setup' by Natalie :3 (https://github.com/ideltic)" && echo
+echo -e "${WHITE}${bold}'Natalie Setup' by Natalie :3 (https://github.com/Nyatalieeee)" && echo
 echo -e "${TEXT}${normal}Running this script will install, configure, and then apply the Catppuccin theme to all necessary packages." && echo
 
 sleep 5 && cd
