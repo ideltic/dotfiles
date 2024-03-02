@@ -121,7 +121,7 @@ echo -e "${PINK}${bold}
 ${normal}${TEXT}
 " && sleep 0.1
 echo -e "          ${bold}${CYAN}---===${PINK}=====${WHITE}=====${PINK}=====${CYAN}===---" && echo
-echo -e "${WHITE}${bold}'Natalie Setup' by Natalie :3 (https://github.com/ideltic)" && echo
+echo -e "${WHITE}${bold}'Natalie Setup' by Natalie :3 (https://github.com/Nyatalieeee)" && echo
 echo -e "${TEXT}${normal}Running this script will install, configure, and then apply the Catppuccin theme to all necessary packages." && echo
 
 sleep 5 && cd
