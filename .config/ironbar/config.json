@@ -108,24 +108,8 @@
     "start": [
       {
         "all_monitors": false,
-        "name_map": {
-          "1": "󰙯",
-          "2": "icon:firefox",
-          "3": "",
-          "Code": "",
-          "Games": "icon:steam"
-        },
+        "name_map": {},
         "type": "workspaces"
-      },
-      {
-        "favorites": [
-          "firefox",
-          "discord",
-          "steam"
-        ],
-        "show_icons": true,
-        "show_names": false,
-        "type": "launcher"
       },
       {
         "label": "random num: {{500:echo FIXME}}",
