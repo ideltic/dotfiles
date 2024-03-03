@@ -1,10 +1,10 @@
-# hi :3
+## hi :3
 
 repo for my dotfiles (plus whatever else i want to add)
 
 pretty self explanatory
 
-## features
+### features
 
 - distro: **arch linux (btw)**
 
@@ -22,6 +22,6 @@ pretty self explanatory
 
 i3, picom, & polybar are available in .config/archive
 
-## installation
+### installation
 
 install script is not ready for usage at this time
