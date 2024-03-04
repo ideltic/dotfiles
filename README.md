@@ -14,7 +14,7 @@ pretty self explanatory
 
 - wm: **swayfx**
 
-- status bar: *wip*
+- status bar: **yambar (wip)**
 
 - app launcher: **rofi**
 
@@ -22,7 +22,7 @@ pretty self explanatory
 
 - theme: **catppuccin**
 
-> i3, picom, & polybar are available in .config/archive
+i3, picom, & polybar are available in .config/archive
 
 ### installation
 
