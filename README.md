@@ -18,7 +18,7 @@ pretty self explanatory
 
 - app launcher: **rofi**
 
-- notifications: **dunst**
+- notifications: **dunst (for now)**
 
 - theme: **catppuccin**
 
