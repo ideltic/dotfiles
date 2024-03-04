@@ -6,11 +6,11 @@ pretty self explanatory
 
 ### features
 
-- distro: **arch linux (btw)**
+- distro: **arch linux *(btw)***
 
 - terminal: **kitty**
 
-- de: lol.
+- de: **lol.**
 
 - wm: **swayfx**
 
@@ -20,7 +20,9 @@ pretty self explanatory
 
 - notifications: **dunst**
 
-i3, picom, & polybar are available in .config/archive
+- theme: **catppuccin**
+
+> i3, picom, & polybar are available in .config/archive
 
 ### installation
 
