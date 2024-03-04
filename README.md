@@ -14,7 +14,7 @@ pretty self explanatory
 
 - wm: **swayfx**
 
-- status bar: **yambar (wip)**
+- status bar: **waybar (wip)**
 
 - app launcher: **rofi**
 
