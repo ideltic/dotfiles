@@ -10,7 +10,7 @@ pretty self explanatory
 
 - terminal: **kitty**
 
-- de: **lol.**
+- de: **no.**
 
 - wm: **swayfx**
 
