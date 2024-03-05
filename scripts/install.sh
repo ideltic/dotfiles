@@ -33,8 +33,8 @@ function pkg_install {
      echo -ne "Installing needed packages..\r" && sleep 1
      echo -ne "Installing needed packages...\r" && sleep 1 && echo
 
-     #yes all | sudo pacman -S --noconfirm --needed bitwarden bottom brightnessctl code dunst firefox grim hyfetch kitty neofetch pamixer picom pipewire pipewire-audio pipewire-pulse plymouth neovim p7zip playerctl polybar rofi rofi-emoji sddm slurp swayimg swaylock starship thunar udiskie uwufetch vlc waybar wayland xorg-xwayland
-     #None | yay -S --noconfirm --needed discord_arch_electron prismlauncher-qt5-bin rofi-greenclip rofi-power-menu slack-desktop swayfx ttf-twemoji
+     #echo "2" | sudo pacman -S --needed --noconfirm bitwarden bottom brightnessctl code dunst firefox grim hyfetch kitty neofetch pamixer picom pipewire pipewire-audio pipewire-pulse plymouth neovim p7zip playerctl polybar rofi rofi-emoji sddm slurp swayimg swaylock starship thunar udiskie uwufetch vlc waybar wayland xorg-xwayland
+     #yay -S --noconfirm --needed discord_arch_electron prismlauncher-qt5-bin rofi-greenclip rofi-power-menu slack-desktop swayfx ttf-twemoji
      
      echo
      echo -e "${GREEN}${bold}Package installation complete.${TEXT}${normal}"
