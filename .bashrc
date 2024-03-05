@@ -1,7 +1,7 @@
 eval "$(starship init bash)"
 export PATH="$PATH:$HOME/.cargo/bin"
 export GTK_THEME='Catppuccin-Macchiato-Standard-Pink-Dark:dark'
-
+export LIBGL_ALWAYS_INDIRECT=0
 
 
 neofetch
@@ -22,6 +22,7 @@ alias e='exit'
 alias evening="bash ~/projects/scripts/feh-evening.sh"
 alias peaks="bash ~/projects/scripts/feh-peaks.sh"
 alias fuji="bash ~/projects/scripts/feh-fuji.sh"
+alias l="ls -al"
 alias sysrq="cat /proc/sys/kernel/sysrq"
 alias vencordinstall="bash ~/projects/scripts/vencordinstall.sh"
 alias vim='nvim'
