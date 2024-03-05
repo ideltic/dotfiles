@@ -10,7 +10,7 @@ pretty self explanatory
 
 - terminal: **kitty**
 
-- de: **no.**
+- de: **No.**
 
 - wm: **swayfx**
 
@@ -26,4 +26,6 @@ i3, picom, & polybar are available in .config/archive
 
 ### installation
 
-install script is not ready for usage at this time
+**!!** *install script is not ready for usage at this time* **!!**
+
+before running the install script, be sure to log in as user, and to run `chown $USER install.sh` in the dotfiles/scripts directory
