@@ -54,7 +54,7 @@ function symlinks {
      #rm -rfv ~/.config/dunst && ln -sfv ~/.dotfiles/.config/dunst ~/.config/ && sleep 0.1
      #rm -rfv ~/.config/hyfetch.json && ln -sfv ~/.dotfiles/.config/hyfetch.json ~/.config/ && sleep 0.1
      #rm -rfv ~/.config/kitty && ln -sfv ~/.dotfiles/.config/kitty ~/.config/ && sleep 0.1
-     #rm -rfv ~/.config/neofetch && ln -sfv /.dotfiles/.config/neofetch ~/.config/ && sleep 0.1
+     #rm -rfv ~/.config/neofetch && ln -sfv ~/.dotfiles/.config/neofetch ~/.config/ && sleep 0.1
      #rm -rfv ~/.config/rofi && ln -sfv ~/.dotfiles/.config/rofi ~/.config/ && sleep 0.1
      #rm -rfv ~/.config/starship.toml && ln -sfv ~/.dotfiles/.config/starship.toml ~/.config/ && sleep 0.1
      #rm -rfv ~/.config/sway && ln -sfv ~/.dotfiles/.config/sway ~/.config/ && sleep 0.1
@@ -139,6 +139,6 @@ catppuccinify
 
 # [USE THIS: https://wiki.archlinux.org/title/Uniform_look_for_Qt_and_GTK_applications]
 
-cd ~
-
 clear && hyfetch
+
+cd ~
