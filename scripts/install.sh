@@ -33,8 +33,8 @@ function pkg_install {
      echo -ne "Installing needed packages..\r" && sleep 1
      echo -ne "Installing needed packages...\r" && sleep 1 && echo
 
-     #echo "2" | sudo pacman -S --needed --noconfirm bitwarden bottom brightnessctl code dunst firefox grim hyfetch kitty neofetch pamixer picom pipewire pipewire-audio pipewire-pulse plymouth neovim p7zip playerctl polybar rofi rofi-emoji sddm slurp swayimg swaylock starship thunar udiskie uwufetch vlc waybar wayland xorg-xwayland
-     #yay -S --noconfirm --needed discord_arch_electron prismlauncher-qt5-bin rofi-greenclip rofi-power-menu slack-desktop swayfx ttf-twemoji
+     #echo "2" | sudo pacman -S --needed --noconfirm bitwarden bottom brightnessctl code dunst firefox greetd grim hyfetch kitty neofetch pamixer picom pipewire pipewire-audio pipewire-pulse plymouth neovim p7zip playerctl polybar rofi rofi-emoji slurp swayimg swaylock starship thunar udiskie uwufetch vlc waybar wayland xorg-xwayland
+     #yay -S --noconfirm --needed discord_arch_electron greetd-wlgreet prismlauncher-qt5-bin rofi-greenclip rofi-power-menu slack-desktop swayfx ttf-twemoji
      
      echo
      echo -e "${GREEN}${bold}Package installation complete.${TEXT}${normal}"
@@ -62,6 +62,9 @@ function symlinks {
      #rm -rfv ~/.config/uwufetch && ln -sfv ~/.dotfiles/.config/uwufetch ~/.config/ && sleep 0.1
      #rm -rfv ~/.config/waybar && ln -sfv ~/.dotfiles/.config/waybar ~/.config/ && sleep 0.1
      #rm -fv ~/.bashrc && ln -sfv ~/.dotfiles/.bashrc ~/.bashrc && sleep 0.1
+     #rm -fv ~/.wezterm.lua && ln -sfv ~/.dotfiles/.wezterm.lua ~/.wezterm.lua && sleep 0.1
+     #sudo rm -rfv /etc/greetd/* && ln -sfv ~/.dotfiles/greetd /etc/greetd/ && sleep 0.1
+     #sudo ln -sf ~/.dotfiles/backgrounds/fuji.png /etc/greetd/fuji.png && sudo ln -sf ~/.dotfiles/.config/sway/appearance/catppuccin /etc/greetd/ && sleep 0.1
      #mkdir -pv ~/Pictures/backgrounds && ln -sfv ~/.dotfiles/backgrounds ~/Pictures/backgrounds && sleep 0.1
      #ln -sfv ~/.dotfiles/fonts ~/.local/share/fonts
      #ln -sfv ~/.dotfiles/sh ~/.config/
@@ -77,8 +80,27 @@ function catppuccinify {
      echo -ne "Beginning the catppuccin-ification..\r" && sleep 1
      echo -ne "Beginning the catppuccin-ification...\r" && sleep 1 && echo
 
-     #mkdir -v ~/ctp-tempdir && cd ~/ctp-tempdir
-     # git clones go here
+     mkdir -v ~/ctptemp && sleep 0.1
+     cd ~/ctptemp
+     
+     # grub ctp installation
+     git clone https://github.com/catppuccin/grub && cd grub
+     # instructions go here
+     cd .. && sleep 0.2
+
+     # plymouth ctp installation
+     git clone https://github.com/catppuccin/plymouth && cd plymouth && sleep 0.1
+     sudo cp -r themes/catppuccin-macchiato /usr/share/plymouth/themes/ && sleep 0.1
+     sudo plymouth-set-default-theme -R catppuccin-macchiato
+     cd .. && sleep 0.2
+
+     # tty ctp installation
+     git clone https://github.com/catppuccin/tty && cd tty
+     # instructions go here
+     cd .. && cd .. && sleep 0.2
+     rm -rf ~/ctptemp
+
+
      
      echo
      echo -e "${GREEN}${bold}Catppuccin-ification complete.${TEXT}${normal}"
@@ -139,11 +161,11 @@ catppuccinify
 
 # [USE THIS: https://wiki.archlinux.org/title/Uniform_look_for_Qt_and_GTK_applications]
 
-sudo systemctl enable sddm.service
+sudo systemctl enable greetd.service
 sudo systemctl enable systemd-resolved.service
 
-clear && hyfetch
+cd
 
-cd ~
+clear && hyfetch
 
 echo -e "${GREEN}${bold}Installation complete! You may now reboot into your new setup.${TEXT}${normal}"
