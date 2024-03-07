@@ -14,7 +14,9 @@ pretty self explanatory
 
 - wm: **[swayfx](https://github.com/WillPower3309/swayfx)**
 
-- status bar: **[waybar](https://github.com/Alexays/Waybar) (wip)**
+- status bar: **[waybar](https://github.com/Alexays/Waybar)**
+
+- display manager: **[greetd](https://github.com/kennylevinsen/greetd) + wlgreet**
 
 - app launcher: **[rofi](https://github.com/davatorium/rofi)**
 
