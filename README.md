@@ -1,6 +1,6 @@
 ## hi :3
 
-repo for my dotfiles (plus whatever else i want to add)
+repo for my dotfiles (plus whatever else i may want to add)
 
 pretty self explanatory
 
@@ -8,21 +8,21 @@ pretty self explanatory
 
 - distro: **arch linux *(btw)***
 
-- terminal: **kitty**
+- terminal: **primarily [kitty](https://github.com/kovidgoyal/kitty), but also [wezterm](https://github.com/wez/wezterm)**
 
 - de: **No.**
 
-- wm: **swayfx**
+- wm: **[swayfx](https://github.com/WillPower3309/swayfx)**
 
-- status bar: **waybar (wip)**
+- status bar: **[waybar](https://github.com/Alexays/Waybar) (wip)**
 
-- app launcher: **rofi**
+- app launcher: **[rofi](https://github.com/davatorium/rofi)**
 
-- notifications: **dunst (for now)**
+- notifications: **[dunst](https://github.com/dunst-project/dunst) (for now, will switch to [swaync](https://github.com/ErikReider/SwayNotificationCenter))**
 
-- theme: **catppuccin**
+- theme: **[catppuccin](https://github.com/catppuccin/)**
 
-i3, picom, & polybar are available in .config/archive
+i3, picom, & polybar configs are available in .config/archive
 
 ### installation
 
