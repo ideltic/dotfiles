@@ -139,6 +139,11 @@ catppuccinify
 
 # [USE THIS: https://wiki.archlinux.org/title/Uniform_look_for_Qt_and_GTK_applications]
 
+sudo systemctl enable sddm.service
+sudo systemctl enable systemd-resolved.service
+
 clear && hyfetch
 
 cd ~
+
+echo -e "${GREEN}${bold}Installation complete! You may now reboot into your new setup.${TEXT}${normal}"
