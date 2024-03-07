@@ -1,0 +1,105 @@
+/*
+ *  SOURCE: https://github.com/lokesh-krishna/dotfiles/tree/main/catppuccin/config/waybar
+ *  yes i stole this bar (sorta)
+ */
+
+* {
+    border-radius: 0;
+    font-family: 'FiraCode Nerd Font Mono';
+    font-size: 12pt;
+    min-height: 0;
+}
+
+window#waybar {
+    background: #24273a;
+    color: #cad3f5;
+}
+
+tooltip {
+	background: #24273a;
+	border-radius: 2px;
+	border-width: 2px;
+	border-style: solid;
+	border-color: #f5bde6;
+	}
+
+#workspaces {
+    background: #363a4f;
+    margin-left: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+}
+
+#workspaces button {
+    padding-left: 10px;
+    padding-right: 10px;
+    min-width: 0;
+    color: #cad3f5;
+}
+
+#workspaces button.focused {
+    color: #f5bde6;
+}
+
+#workspaces button.urgent {
+    color: #ed8796;
+}
+
+#workspaces button:hover {
+    background: #363a4f;
+    border-color: #363a4f;
+    border-radius: 7px;
+	color: #a5adcb;
+}
+
+#clock, #battery, #pulseaudio, #workspaces, #mpd  {
+	padding: 2px 10px;
+    background: #363a4f;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#network {
+    padding-left: 10px;
+    padding-right: 2px;
+    background: #363a4f;
+    border-radius: 10px 0px 0px 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#pulseaudio {
+    padding-left: 10px;
+    padding-right: 2px;
+    background: #363a4f;
+    border-radius: 10px 0px 0px 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#clock {
+    padding-right: 10px;
+    margin-right: 5px;
+    border-radius: 0px 10px 10px 0px;
+}
+
+#window {
+    background: #24273a;
+    margin-left: 4px;
+    margin-right: 4px;
+    color: #cad3f5;
+    font-size: 11pt;
+}
+
+#tray {
+    background: #24273a;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+#tray menu {
+    background: #1e2030;
+    border-color: #363a4f;
+    border-radius: 2px;
+    font-size: 10pt;
+}
