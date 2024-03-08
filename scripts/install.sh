@@ -83,6 +83,12 @@ function catppuccinify {
      mkdir -v ~/ctptemp && sleep 0.1
      cd ~/ctptemp
      
+     # gtk ctp installation
+
+     #rm -rfv ~/.config/gtk-2.0 && ln -sfv ~/.dotfiles/.config/gtk-2.0/ ~/.config/ && sleep 0.1
+     #rm -rfv ~/.config/gtk-3.0 && ln -sfv ~/.dotfiles/.config/gtk-3.0/ ~/.config/ && sleep 0.1
+     #rm -rfv ~/.config/gtk-4.0 && ln -sfv ~/.dotfiles/.config/gtk-4.0/ ~/.config/ && ln -sfv ~/.dotfiles/.config/gtk-4.0 ~/.themes/Catppuccin-Macchiato-Standard-Pink-Dark/ && sleep 0.1
+
      # grub ctp installation
      git clone https://github.com/catppuccin/grub && cd grub
      # instructions go here
