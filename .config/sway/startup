@@ -4,5 +4,8 @@ exec_always --no-startup-id wbg ~/Pictures/backgrounds/peaks.png
 # launches waybar
 exec_always --no-startup-id sh ~/.config/sh/wblaunch.sh
 
+# starts swayosd
+exec_always --no-startup-id swayosd-server
+
 # starts swaync (notification daemon)
 exec swaync
