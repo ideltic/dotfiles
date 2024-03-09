@@ -1,7 +1,9 @@
+# copy this to /etc/greetd/
+
 include /etc/greetd/catppuccin
 exec --no-startup-id wbg /etc/greetd/fuji.png
 
-exec "wlgreet --command sway; swaymsg exit"
+exec "wlgreet --config /etc/greetd/wlg-config.toml --command sway; swaymsg exit"
 
 bindsym Mod4+shift+e exec swaynag \
 -t warning \

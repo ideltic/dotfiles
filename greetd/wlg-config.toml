@@ -1,0 +1,13 @@
+# config file for wlgreet
+# copy this to /etc/greetd/
+
+command = "sway"
+outputMode = "all"
+scale = 1
+
+[background]
+# colors must be in RGB percentages
+red = 0.14
+green = 0.15
+blue = 0.23
+opacity = 0.9
