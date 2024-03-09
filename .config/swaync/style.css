@@ -1,12 +1,13 @@
 * {
   all: unset;
   font-size: 14px;
+  font-weight: 400;
   font-family: "FiraCode Nerd Font";
   transition: 200ms;
 }
 
 .floating-notifications.background .notification-row .notification-background {
-  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.8), inset 0 0 0 1px #363a4f;
+  box-shadow: 0 0 8px 0 rgba(30, 32, 48, 0.8), inset 0 0 0 2px #f5bde6;
   border-radius: 12.6px;
   margin: 18px;
   background-color: #24273a;
@@ -25,18 +26,25 @@
 
 .floating-notifications.background .notification-row .notification-background .notification .notification-content {
   margin: 7px;
+  padding: 3px;
 }
 
+/* notification title */
 .floating-notifications.background .notification-row .notification-background .notification .notification-content .summary {
-  color: #cad3f5;
+  color: #f5bde6;
+  font-size: 17px;
+  font-weight: 600;
+  padding: 8px;
 }
-
+/* ?????????? */
 .floating-notifications.background .notification-row .notification-background .notification .notification-content .time {
   color: #a5adcb;
+  padding: 8px;  
 }
-
+/* notification main text */
 .floating-notifications.background .notification-row .notification-background .notification .notification-content .body {
   color: #cad3f5;
+  padding: 8px;
 }
 
 .floating-notifications.background .notification-row .notification-background .notification > *:last-child > * {
@@ -137,7 +145,9 @@
 }
 
 .control-center .notification-row .notification-background .notification .notification-content .summary {
-  color: #cad3f5;
+  color: #f5bde6;
+  font-weight: 500;
+  padding: 8px;
 }
 
 .control-center .notification-row .notification-background .notification .notification-content .time {
@@ -146,6 +156,7 @@
 
 .control-center .notification-row .notification-background .notification .notification-content .body {
   color: #cad3f5;
+  padding: 8px;
 }
 
 .control-center .notification-row .notification-background .notification > *:last-child > * {
@@ -267,4 +278,9 @@ trough {
   background: #494d64;
   border-radius: 8px;
   border: 1px solid #6e738d;
+}
+
+.image,
+.body-image {
+  border-radius: 16px;
 }
