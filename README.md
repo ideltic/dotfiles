@@ -20,7 +20,7 @@ pretty self explanatory
 
 - app launcher: **[rofi](https://github.com/davatorium/rofi)**
 
-- notifications: **[dunst](https://github.com/dunst-project/dunst) (for now, will switch to [swaync](https://github.com/ErikReider/SwayNotificationCenter))**
+- notifications: **[swaync](https://github.com/ErikReider/SwayNotificationCenter) (wip)**
 
 - theme: **[catppuccin](https://github.com/catppuccin/)**
 
