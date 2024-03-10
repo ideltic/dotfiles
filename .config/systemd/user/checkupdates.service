@@ -1,0 +1,6 @@
+[Unit]
+Description=Checks for pacman updates.
+
+[Service]
+Type=oneshot
+ExecStart=/home/$USER/.config/sh/checkupdates.sh

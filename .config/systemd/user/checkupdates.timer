@@ -1,0 +1,9 @@
+[Unit]
+Description=Check for updates on boot.
+
+[Timer]
+OnBootSec=1min
+OnUnitActiveSec=2h
+
+[Install]
+WantedBy=timers.target
