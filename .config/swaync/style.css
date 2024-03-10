@@ -8,16 +8,16 @@
 
 .floating-notifications.background .notification-row .notification-background {
   box-shadow: 0 0 8px 0 rgba(30, 32, 48, 0.8), inset 0 0 0 2px #f5bde6;
-  border-radius: 12.6px;
+  border-radius: 9.5px;
   margin: 18px;
-  background-color: #24273a;
+  background-color: rgba(36, 39, 58, 0.8);
   color: #cad3f5;
   padding: 0;
 }
 
 .floating-notifications.background .notification-row .notification-background .notification {
   padding: 7px;
-  border-radius: 12.6px;
+  border-radius: 9.5px;
 }
 
 .floating-notifications.background .notification-row .notification-background .notification.critical {
@@ -90,8 +90,8 @@
 }
 
 .control-center {
-  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.8), inset 0 0 0 1px #363a4f;
-  border-radius: 12.6px;
+  box-shadow: 0 0 8px 0 rgba(30, 32, 48, 0.8), inset 0 0 0 2px #f5bde6;
+  border-radius: 9.5px;
   margin: 18px;
   background-color: #24273a;
   color: #cad3f5;
@@ -279,7 +279,7 @@ trough {
   border-radius: 8px;
   border: 1px solid #6e738d;
 }
-
+/* notification icon */
 .image,
 .body-image {
   border-radius: 16px;
