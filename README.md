@@ -22,7 +22,7 @@ pretty self explanatory
 
 - notifications: **[swaync](https://github.com/ErikReider/SwayNotificationCenter)**
 
-- prompt: [starship (my beloved)](https://starship.rs/)
+- prompt: **[starship (my beloved)](https://starship.rs/)**
 
 - theme: **[catppuccin](https://github.com/catppuccin/)**
 
