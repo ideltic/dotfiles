@@ -103,3 +103,6 @@ tooltip {
     border-radius: 2px;
     font-size: 10pt;
 }
+#custom-notification {
+    font-family: "FiraCode Nerd Font Mono";
+  }

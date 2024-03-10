@@ -1,0 +1,9 @@
+[Unit]
+Description=Restore usb-Chicony_Electronics_Co._Ltd._HD_WebCam_0001-video-index0 controls
+
+[Service]
+Type=oneshot
+ExecStart=/usr/lib/python3.11/site-packages/CameraCtrls/cameractrls.py -d /dev/v4l/by-id/usb-Chicony_Electronics_Co._Ltd._HD_WebCam_0001-video-index0 -c power_line_frequency=60_hz,sharpness=37,pixelformat=MJPG,card=HD WebCam: HD WebCam,driver=uvcvideo,path=/dev/v4l/by-id/usb-Chicony_Electronics_Co._Ltd._HD_WebCam_0001-video-index0,real_path=/dev/video0,resolution=640x480,fps=30
+
+[Install]
+WantedBy=graphical-session.target
