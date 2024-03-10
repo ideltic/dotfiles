@@ -23,6 +23,7 @@ alias evening="bash ~/projects/scripts/feh-evening.sh"
 alias peaks="bash ~/projects/scripts/feh-peaks.sh"
 alias fuji="bash ~/projects/scripts/feh-fuji.sh"
 alias l="ls -al"
+alias playing="playerctl metadata --format '{{artist}} - {{ title}}'"
 alias sysrq="cat /proc/sys/kernel/sysrq"
 alias vencordinstall="bash ~/projects/scripts/vencordinstall.sh"
 alias vim='nvim'
