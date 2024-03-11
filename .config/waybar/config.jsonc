@@ -4,9 +4,9 @@
 {
     "position": "bottom",
     "height": 22,
-    "modules-left": ["sway/workspaces", "tray"],
+    "modules-left": ["sway/workspaces"],
     "modules-center": ["sway/window"],
-    "modules-right": ["pulseaudio", "battery", "clock", "notification"],
+    "modules-right": ["tray","pulseaudio", "battery", "clock", "notification"],
     // Modules configuration
     "sway/workspaces": {
       "disable-scroll": true,
