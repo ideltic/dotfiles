@@ -8,7 +8,7 @@ pretty self explanatory
 
 - distro: **arch linux *(btw)***
 
-- terminal: **primarily [kitty](https://github.com/kovidgoyal/kitty), also [wezterm](https://github.com/wez/wezterm)**
+- terminal: **primarily [wezterm](https://github.com/wez/wezterm), also [kitty](https://github.com/kovidgoyal/kitty)**
 
 - de: **No.**
 
@@ -16,9 +16,9 @@ pretty self explanatory
 
 - status bar: **[waybar](https://github.com/Alexays/Waybar)**
 
-- display manager: **[greetd](https://github.com/kennylevinsen/greetd) + wlgreet**
+- display manager: **[greetd](https://github.com/kennylevinsen/greetd) + wlgreet (greeter)**
 
-- app launcher: **[rofi](https://github.com/davatorium/rofi) (for now, will switch to [fuzzel](https://codeberg.org/dnkl/fuzzel)**
+- app launcher: **[fuzzel](https://codeberg.org/dnkl/fuzzel)**
 
 - notifications: **[swaync](https://github.com/ErikReider/SwayNotificationCenter)**
 
@@ -26,7 +26,7 @@ pretty self explanatory
 
 - theme: **[catppuccin](https://github.com/catppuccin/)**
 
-i3, picom, dunst, & polybar configs are available in .config/archive
+i3, picom, dunst, rofi, & polybar configs are available in .config/archive
 
 ### installation
 
