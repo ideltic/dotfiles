@@ -10,6 +10,8 @@ config = {
     -- cursor_blink_ease_out = Constant,
 
     default_cursor_style = 'SteadyUnderline',
+
+    default_prog = { '/usr/bin/bash' },
     
     font = wzt.font 'FiraCode Nerd Font Mono',
     font_size = 10.5,
