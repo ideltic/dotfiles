@@ -29,12 +29,13 @@ scratchpad_minimize disable
 bindsym $mod+n exec swaync-client -t -sw
 
 # capture screenshots using grim & slurp (config partially stolen from u/rggarou on r/swaywm)
+
 # capture all screens
-bindsym Shift+Print exec grim ~/Pictures/$(date +'%s_grim.png') && notify-send "Screenshot saved to ~/Pictures"
+bindsym Shift+Print exec grim ~/Pictures/$(date +'%s_grim.png') && notify-send "Caught in 4K Ultra HD" "Screenshot saved to ~/Pictures"
 # capture all screens and copy to clipboard    
 #bindsym Control+Shift+Print exec grim - | wl-copy && notify-send "Full screen copied to clipboard"
 
 # capture the specified screen area
-bindsym $sup+Shift+s exec grim -g "$(slurp)" ~/Pictures/$(date +'%s_grim.png') && notify-send "Selection saved to ~/Pictures"
+bindsym $sup+Shift+s exec grim -g "$(slurp)" ~/Pictures/$(date +'%s_grim.png') && notify-send "Caught in 1080p" "Selection saved to ~/Pictures"
 # capture the specified screen area and copy to clipboard    
-bindsym $sup+Shift+Print exec grim -g "$(slurp)" - | wl-copy && notify-send "Selection copied to clipboard"
+bindsym $sup+Shift+Print exec grim -g "$(slurp)" - | wl-copy && notify-send "Caught in 1080p" "Selection copied to clipboard"
