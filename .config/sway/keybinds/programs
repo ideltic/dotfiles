@@ -7,6 +7,9 @@ bindsym $mod+Return exec wezterm
 # launch kitty (other terminal)
 bindsym $mod+Shift+Return exec kitty
 
+# launch cool-retro-term (other terminal)
+bindsym $mod+Control+Return exec cool-retro-term
+
 # start fuzzel (app launcher)
 bindsym $mod+space exec --no-startup-id fuzzel --config=$HOME/.dotfiles/.config/fuzzel/fuzzel.ini
 
