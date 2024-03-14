@@ -10,8 +10,8 @@ bindsym $mod+Shift+Return exec kitty
 # start fuzzel (app launcher)
 bindsym $mod+space exec --no-startup-id fuzzel --config=$HOME/.dotfiles/.config/fuzzel/fuzzel.ini
 
-# rofi clipboard tool (OUTDATED; FIX THIS)
-bindsym $mod+c exec clipman pick -t fuzzel --notify
+# cliphist (clipboard tool)
+bindsym $mod+c exec cliphist list | fuzzel --dmenu | cliphist decode | wl-copy
 
 # bemoji (emoji picker for fuzzel)
 bindsym $sup+period exec --no-startup-id bemoji
@@ -25,12 +25,18 @@ scratchpad_minimize disable
 # swaync control center
 bindsym $mod+n exec swaync-client -t -sw
 
-# capture screenshots using grim & slurp (config stolen from u/rggarou on r/swaywm)
-# capture all screens to clipboard    
-bindsym Shift+Print exec grim - | wl-copy    
-    
-# capture the specified screen area to clipboard    
-bindsym $sup+Shift+Print exec grim -g "$(slurp)" - | wl-copy
-    
-# capture the focused monitor to clipboard    
+# capture screenshots using grim & slurp (config partially stolen from u/rggarou on r/swaywm)
+# capture all screens
+bindsym $mod+Shift+s exec grim ~/Pictures/$(date +'%s_grim.png') && notify-send "Full screen saved to ~/Pictures"
+# capture all screens and copy to clipboard    
+bindsym $mod+Shift+Print exec grim - | wl-copy && notify-send "Full screen copied to clipboard"
+
+# capture the specified screen area
+bindsym $sup+Shift+s exec grim -g "$(slurp)" ~/Pictures/$(date +'%s_grim.png') && notify-send "Selection saved to ~/Pictures"
+# capture the specified screen area and copy to clipboard    
+bindsym $sup+Shift+Print exec grim -g "$(slurp)" - | wl-copy && notify-send "Selection copied to clipboard"
+
+# capture the focused monitor
+# bindsym Shift+Control+Print exec grim -o $(swaymsg -t get_outputs | jq -r '.[] | select(.focused) | .name')    
+# capture the focused monitor and copy to clipboard
 # bindsym Shift+Control+Print exec grim -o $(swaymsg -t get_outputs | jq -r '.[] | select(.focused) | .name') - | wl-copy
