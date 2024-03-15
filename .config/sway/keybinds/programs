@@ -33,7 +33,7 @@ bindsym $mod+n exec swaync-client -t -sw
 # capture all screens
 bindsym Shift+Print exec grim ~/Pictures/$(date +'%s_grim.png') && notify-send "Caught in 4K Ultra HD" "Screenshot saved to ~/Pictures"
 # capture all screens and copy to clipboard    
-#bindsym Control+Shift+Print exec grim - | wl-copy && notify-send "Full screen copied to clipboard"
+bindsym Control+Shift+Print exec grim - | wl-copy && notify-send "Caught in 4K Ultra HD" "Full screen copied to clipboard"
 
 # capture the specified screen area
 bindsym $sup+Shift+s exec grim -g "$(slurp)" ~/Pictures/$(date +'%s_grim.png') && notify-send "Caught in 1080p" "Selection saved to ~/Pictures"
