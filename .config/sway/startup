@@ -1,14 +1,14 @@
 # use wbg to set a wallpaper
-exec_always --no-startup-id wbg ~/Pictures/backgrounds/peaks.png
+exec_always wbg ~/Pictures/backgrounds/peaks.png
 
 # starts autotiling-rs
 exec autotiling-rs
 
 # launches waybar
-exec_always --no-startup-id sh ~/.config/sh/wblaunch.sh
+exec_always sh ~/.config/sh/wblaunch.sh
 
 # starts swayosd
-exec_always --no-startup-id swayosd-server
+exec_always swayosd-server
 
 # starts swaync (notification daemon)
 exec swaync

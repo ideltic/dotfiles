@@ -1,5 +1,5 @@
 # open file manager (thunar)
-bindsym $sup+e exec --no-startup-id thunar
+bindsym $sup+e exec thunar
 
 # launch wezterm (terminal)
 bindsym $mod+Return exec wezterm
@@ -11,13 +11,13 @@ bindsym $mod+Shift+Return exec kitty
 bindsym $mod+Control+Return exec cool-retro-term
 
 # start fuzzel (app launcher)
-bindsym $mod+space exec --no-startup-id fuzzel --config=$HOME/.dotfiles/.config/fuzzel/fuzzel.ini
+bindsym $mod+space exec fuzzel --config=$HOME/.dotfiles/.config/fuzzel/fuzzel.ini
 
 # cliphist (clipboard tool)
 bindsym $mod+c exec cliphist list | fuzzel --dmenu | cliphist decode | wl-copy
 
 # bemoji (emoji picker for fuzzel)
-bindsym $sup+period exec --no-startup-id bemoji
+bindsym $sup+period exec bemoji
 
 # sway scratchpad
 bindsym $mod+Shift+minus move scratchpad

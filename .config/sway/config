@@ -11,7 +11,7 @@ set $right l
 floating_modifier $mod normal
 
 # Reload the configuration file
-bindsym $mod+Shift+Shift+c reload
+bindsym $mod+Shift+c reload
 
 # Exit sway (logs you out of your Wayland session)
 bindsym $sup+Shift+e exec wlogout -C ~/.dotfiles/.config/wlogout/style.css -l ~/.dotfiles/.config/wlogout/layout
