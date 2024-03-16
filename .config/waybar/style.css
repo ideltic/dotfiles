@@ -8,10 +8,12 @@
     font-family: 'FiraCode Nerd Font Mono';
     font-size: 12pt;
     min-height: 0;
+    padding-right: 3px;
+    padding-left: 3px;
 }
 
 window#waybar {
-    background: #24273a;
+    background: transparent;
     color: #cad3f5;
 }
 
@@ -24,7 +26,7 @@ tooltip {
 	}
 
 #workspaces {
-    background: #363a4f;
+    background: #24273a;
     margin-left: 5px;
     margin-top: 5px;
     margin-bottom: 5px;
@@ -55,7 +57,7 @@ tooltip {
 
 #clock, #battery, #pulseaudio, #workspaces, #mpd  {
 	padding: 2px 10px;
-    background: #363a4f;
+    background: #24273a;
     margin-top: 5px;
     margin-bottom: 5px;
 }
@@ -72,7 +74,7 @@ tooltip {
 #pulseaudio {
     padding-left: 10px;
     padding-right: 2px;
-    background: #363a4f;
+    background: #24273a;
     border-radius: 10px 0px 0px 10px;
     margin-top: 5px;
     margin-bottom: 5px;
@@ -85,15 +87,17 @@ tooltip {
 }
 
 #window {
-    background: #24273a;
+    background: transparent;
     margin-left: 4px;
     margin-right: 4px;
     color: #cad3f5;
     font-size: 11pt;
+    padding: 10px;
+    border-radius: 10px;
 }
 
 #tray {
-    background: #24273a;
+    background: transparent;
     margin-left: 4px;
     margin-right: 7px;
 }
