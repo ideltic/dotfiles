@@ -33,7 +33,7 @@ function wm_install {
      echo -ne "Installing window manager..\r" && sleep 1
      echo -ne "Installing window manager...\r" && sleep 1 && echo
      
-     #echo "2" | sudo pacman -S --needed --noconfirm autotiling-rs brightnessctl cliphist fuzzel gnome-keyring greetd grim pamixer pipewire pipewire-audio pipewire-pulse plymouth pulseaudio-control qt5-wayland qt6-wayland slurp swayimg swaylock thunar waybar wayland wl-clipboard xorg-xwayland
+     #echo "2" | sudo pacman -S --needed --noconfirm autotiling-rs brightnessctl cliphist fuzzel gnome-keyring greetd grim pamixer pavucontrol pipewire pipewire-audio pipewire-pulse plymouth qt5-wayland qt6-wayland rust slurp swayimg swaylock thunar waybar wayland wl-clipboard xorg-xwayland
      #yay -S --noconfirm --needed bemoji greetd-wlgreet swayfx swaync swayosd-git ttf-twemoji wbg wl-clip-persist-git
 
      echo
