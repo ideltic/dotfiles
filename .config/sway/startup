@@ -5,7 +5,7 @@ exec_always wbg ~/Pictures/backgrounds/peaks.png
 exec autotiling-rs
 
 # launches waybar
-exec_always sh ~/.config/sh/wblaunch.sh
+# exec_always sh ~/.config/sh/wblaunch.sh 
 
 # starts swayosd
 exec_always swayosd-server

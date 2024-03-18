@@ -1,0 +1,24 @@
+# boring ass bar that Just Works (mostly)
+
+include $HOME/.config/sway/appearance/catppuccin
+
+bar {
+    font FiraCode Nerd Font Mono 11
+    height 24
+    position bottom
+    
+    status_command sh ~/.dotfiles/.config/sway/swaybar/statuscmd.sh;
+
+    colors {
+        background         $base
+        statusline         $text
+        focused_statusline $text
+        focused_separator  $base
+        # color order: border, background, text
+        focused_workspace   $surface0 $surface0 $text
+        inactive_workspace $base $base $surface1
+        active_workspace  $base $base $text
+        urgent_workspace   $red $base $red
+        binding_mode       $base $base $surface1
+    }
+}
