@@ -14,7 +14,7 @@ pretty self explanatory
 
 - wm: **[swayfx](https://github.com/WillPower3309/swayfx)**
 
-- status bar: **[waybar](https://github.com/Alexays/Waybar)**
+- status bar: **swaybar (or [waybar](https://github.com/Alexays/Waybar))**
 
 - display manager: **[greetd](https://github.com/kennylevinsen/greetd) + wlgreet (greeter)**
 
