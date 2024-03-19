@@ -3,7 +3,7 @@
 include $HOME/.config/sway/appearance/catppuccin
 
 bar {
-    font FiraCode Nerd Font Mono 11
+    font IosevkaTerm Nerd Font 12
     height 24
     position bottom
     
@@ -19,6 +19,6 @@ bar {
         inactive_workspace $base $base $surface1
         active_workspace  $base $base $text
         urgent_workspace   $red $base $red
-        binding_mode       $base $base $surface1
+        binding_mode       $base $base $pink
     }
 }
