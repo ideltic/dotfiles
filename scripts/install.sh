@@ -33,8 +33,8 @@ function wm_install {
      echo -ne "Installing window manager..\r" && sleep 1
      echo -ne "Installing window manager...\r" && sleep 1 && echo
      
-     #echo "2" | sudo pacman -S --needed --noconfirm autotiling-rs brightnessctl cliphist fuzzel gnome-keyring greetd grim pamixer pavucontrol pipewire pipewire-audio pipewire-pulse plymouth qt5-wayland qt6-wayland rust slurp swayimg swaylock thunar waybar wayland wl-clipboard xorg-xwayland
-     #yay -S --noconfirm --needed bemoji greetd-wlgreet swayfx swaync swayosd-git ttf-twemoji wbg wl-clip-persist-git
+     #echo "2" | sudo pacman -S --needed --noconfirm autotiling-rs brightnessctl cliphist fuzzel gnome-keyring grim pamixer pavucontrol pipewire pipewire-audio pipewire-pulse plymouth qt5-wayland qt6-wayland rust sddm slurp swayimg swaylock thunar waybar wayland wl-clipboard xorg-xwayland
+     #yay -S --noconfirm --needed bemoji swayfx swaync swayosd-git ttf-twemoji wbg wl-clip-persist-git
 
      echo
      echo -e "${GREEN}${bold}Window manager installation complete.${TEXT}${normal}"
@@ -94,49 +94,6 @@ function symlinks {
      sleep 3 && echo
 }
 
-function catppuccinify {
-     echo -ne "Beginning the catppuccin-ification.\r" && sleep 1
-     echo -ne "Beginning the catppuccin-ification..\r" && sleep 1
-     echo -ne "Beginning the catppuccin-ification...\r" && sleep 1 && echo
-
-     mkdir -v ~/ctptemp && sleep 0.1
-     cd ~/ctptemp
-     
-     # gtk ctp installation
-
-     #rm -rfv ~/.config/gtk-2.0 && ln -sfv ~/.dotfiles/.config/gtk-2.0/ ~/.config/ && sleep 0.1
-     #rm -rfv ~/.config/gtk-3.0 && ln -sfv ~/.dotfiles/.config/gtk-3.0/ ~/.config/ && sleep 0.1
-     #rm -rfv ~/.config/gtk-4.0 && ln -sfv ~/.dotfiles/.config/gtk-4.0/ ~/.config/ && ln -sfv ~/.dotfiles/.config/gtk-4.0 ~/.themes/Catppuccin-Macchiato-Standard-Pink-Dark/ && sleep 0.1
-
-     # grub ctp installation
-     git clone https://github.com/catppuccin/grub && cd grub
-     # instructions go here
-     cd .. && sleep 0.2
-
-     # plymouth ctp installation
-     git clone https://github.com/catppuccin/plymouth && cd plymouth && sleep 0.1
-     sudo cp -r themes/catppuccin-macchiato /usr/share/plymouth/themes/ && sleep 0.1
-     sudo plymouth-set-default-theme -R catppuccin-macchiato
-     cd .. && sleep 0.2
-
-     # tty ctp installation
-     git clone https://github.com/catppuccin/tty && cd tty
-     # instructions go here
-     cd .. && cd .. && sleep 0.2
-
-     # gtk ctp installation
-     git clone https://github.com/catppuccin/gtk && cd gtk
-     # instructions go here
-     cd .. && cd .. && sleep 0.2
-
-     # remove temp directory
-     rm -rfv ~/ctptemp
-     
-     echo
-     echo -e "${GREEN}${bold}Catppuccin-ification complete.${TEXT}${normal}"
-     sleep 3 && echo
-}
-
 #while :
 #do
 ## stolen from: https://askubuntu.com/a/970898
@@ -190,7 +147,6 @@ pkg_install
 # creating symlinks
 symlinks
 
-catppuccinify
 
 # [USE THIS: https://wiki.archlinux.org/title/Uniform_look_for_Qt_and_GTK_applications]
 
