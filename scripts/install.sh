@@ -17,11 +17,11 @@ function yay_install {
      echo -ne "Installing yay..\r" && sleep 1
      echo -ne "Installing yay...\r" && sleep 1 && echo
 
-     #sudo pacman -Syu --noconfirm --needed base-devel git
-     #git clone https://aur.archlinux.org/yay.git /home/$USER/yay && cd /home/$USER/yay
-     #makepkg -si
-     #cd ..
-     #rm -rf /home/$USER/yay
+     sudo pacman -Syu --noconfirm --needed base-devel git
+     git clone https://aur.archlinux.org/yay.git /home/$USER/yay && cd /home/$USER/yay
+     makepkg -si
+     cd ..
+     rm -rf /home/$USER/yay
 
      echo
      echo -e "${GREEN}${bold}Yay successfully installed.${TEXT}${normal}"
@@ -182,15 +182,15 @@ sleep 5 && cd
 yay_install
 
 # window manager installation
-wm_install
+#wm_install
 
 # installing other needed packages
-pkg_install
+#pkg_install
 
 # creating symlinks
-symlinks
+#symlinks
 
-catppuccinify
+#catppuccinify
 
 # [USE THIS: https://wiki.archlinux.org/title/Uniform_look_for_Qt_and_GTK_applications]
 
