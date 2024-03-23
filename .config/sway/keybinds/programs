@@ -2,7 +2,7 @@
 bindsym $sup+e exec thunar
 
 # launch wezterm (terminal)
-bindsym $mod+Return exec wezterm
+bindsym $mod+Return exec foot
 
 # launch kitty (other terminal)
 bindsym $mod+Shift+Return exec kitty
