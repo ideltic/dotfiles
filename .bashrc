@@ -3,7 +3,7 @@ export PATH="$PATH:$HOME/.cargo/bin:$HOME/.local/bin"
 export GTK_THEME='Catppuccin-Macchiato-Standard-Pink-Dark:dark'
 export LIBGL_ALWAYS_INDIRECT=0
 
-neofetch
+neofetch && echo "fedora is better"
 
 # random aliases
 alias gae='clear && hyfetch'
