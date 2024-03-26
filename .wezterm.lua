@@ -11,7 +11,7 @@ config = {
 
     default_cursor_style = 'SteadyUnderline',
 
-    default_prog = { '/usr/bin/bash' },
+    default_prog = { '/usr/bin/zsh' },
     
     font = wzt.font 'FiraCode Nerd Font Mono',
     font_size = 10.5,
