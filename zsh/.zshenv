@@ -20,6 +20,7 @@ alias c='clear'
 alias closedc='bash $HOME/.config/sh/pkill-discord.sh'
 alias e='exit'
 alias l="ls -al"
+alias natalie="btm"
 alias playing="playerctl metadata --format '{{artist}} - {{ title}}'"
 alias pwease="sudo"
 alias sysrq="cat /proc/sys/kernel/sysrq"
