@@ -17,10 +17,12 @@ alias :3="echo ':3'"
 
 # actually useful shit goes here
 alias c='clear'
+alias cdc='cd && clear'
+alias cl='clear && ls -al'
 alias closedc='bash $HOME/.config/sh/pkill-discord.sh'
 alias e='exit'
 alias l="ls -al"
-alias natalie="btm"
+alias natalie="btm && echo 🥺"
 alias playing="playerctl metadata --format '{{artist}} - {{ title}}'"
 alias pwease="sudo"
 alias sysrq="cat /proc/sys/kernel/sysrq"
