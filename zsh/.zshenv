@@ -12,6 +12,7 @@ alias meow='cat ~/Documents/meow'
 alias neofetch='clear && neofetch'
 alias nf='clear && neofetch'
 alias nyarch='neofetch --kitty ~/.dotfiles/.config/neofetch/nyarch.png --size 25%'
+alias snf='sudo clear && sudo neofetch'
 alias uwu="clear && uwufetch"
 alias :3="echo ':3'"
 
@@ -24,6 +25,7 @@ alias e='exit'
 alias l="ls -al"
 alias natalie="btm && echo 🥺"
 alias playing="playerctl metadata --format '{{artist}} - {{ title}}'"
+alias pubip="curl https://ipv4.icanhazip.com"
 alias pwease="sudo"
 alias sysrq="cat /proc/sys/kernel/sysrq"
 alias vencordinstall="bash $HOME/.config/sh/vencordinstall.sh"
