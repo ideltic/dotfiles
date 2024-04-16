@@ -2,6 +2,7 @@
 
 # manually install yay-bin
 echo "" && echo "Installing yay-bin..." && sleep 4
+sudo pacman -S --needed base-devel git
 git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && sleep 0.5
 makepkg -si && sleep 0.3 & cd .. && sleep 0.2
 rm -rfv yay-bin && sleep 0.5
