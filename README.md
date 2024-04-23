@@ -6,9 +6,9 @@ pretty self explanatory
 
 ### features
 
-- distro: **arch linux *(against my will)***
+- distro: **endeavouros *(against my will)***
 
-- terminal: **[wezterm](https://github.com/wez/wezterm)**
+- terminal: **[wezterm](https://github.com/wez/wezterm) or [konsole](https://github.com/KDE/konsole)**
 
 - de: **KDE Plasma 6**
 
@@ -24,8 +24,4 @@ pretty self explanatory
 
 i3 and sway configs are available in .config/archive
 
-### installation
-
-**!!** *install script is not ready for usage* **!!**
-
-the install script currently assumes that you will be using swaywm instead of KDE plasma, i do *not* recommend running it
+**the install script currently assumes that you will be using swaywm instead of KDE plasma, i do *not* recommend running it**
