@@ -12,6 +12,7 @@ alias meow='cat ~/Documents/meow'
 alias neofetch='clear && neofetch'
 alias nf='clear && neofetch'
 alias nyarch='neofetch --kitty ~/.dotfiles/.config/neofetch/nyarch.png --size 25%'
+alias pwease='sudo'
 alias snf='sudo clear && sudo neofetch'
 alias uwu="clear && uwufetch"
 alias :3="echo ':3'"
