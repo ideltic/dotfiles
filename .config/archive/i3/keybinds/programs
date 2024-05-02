@@ -6,8 +6,8 @@ bindsym Shift+Print exec --no-startup-id flameshot screen
 # open file manager (thunar)
 bindsym $sup+e exec --no-startup-id thunar
 
-# launch kitty (terminal)
-bindsym $mod+Return exec kitty
+# launch wezterm (terminal)
+bindsym $mod+Return exec wezterm
 
 # start rofi
 bindsym $mod+space exec --no-startup-id rofi -show drun -run-command "i3-msg exec '{cmd}'" -show-icons -font "Hack Nerd Font 14"
