@@ -1,21 +1,21 @@
 # window corner radius in px (swayfx)
-#corner_radius 10
+corner_radius 10
 
 # Window background blur (swayfx)
-#blur on
-#blur_xray off
-#blur_passes 2
-#blur_radius 5
+blur on
+blur_xray off
+blur_passes 2
+blur_radius 5
 
-#shadows on
-#shadows_on_csd off
-#shadow_blur_radius 20
-#shadow_color #181926
+shadows on
+shadows_on_csd off
+shadow_blur_radius 20
+shadow_color #181926
 
 # inactive window fade amount. 0.0 = no dimming, 1.0 = fully dimmed
-#default_dim_inactive 0.2
-#dim_inactive_colors.unfocused #000000FF
-#dim_inactive_colors.urgent #900000FF
+default_dim_inactive 0.2
+dim_inactive_colors.unfocused #000000FF
+dim_inactive_colors.urgent #900000FF
 
 # set gaps between windows
 gaps inner 10
