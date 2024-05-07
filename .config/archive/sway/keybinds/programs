@@ -2,10 +2,10 @@
 bindsym $sup+e exec thunar
 
 # launch wezterm (terminal)
-bindsym $mod+Return exec foot
+bindsym $mod+Return exec wezterm
 
-# launch kitty (other terminal)
-bindsym $mod+Shift+Return exec kitty
+# launch konsole (other terminal)
+bindsym $mod+Shift+Return exec konsole
 
 # launch cool-retro-term (other terminal)
 bindsym $mod+Control+Return exec cool-retro-term
