@@ -1,6 +1,6 @@
 [user]
-	email = ideltic05@proton.me
-	name = Natalie Ashley Raine
+	email = nyatalieeee@proton.me
+	name = Natalie Raine
 [credential "https://github.com"]
 	helper = 
 	helper = !/usr/bin/gh auth git-credential
