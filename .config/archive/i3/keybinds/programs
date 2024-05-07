@@ -13,7 +13,7 @@ bindsym $mod+Return exec wezterm
 bindsym $mod+space exec --no-startup-id rofi -show drun -run-command "i3-msg exec '{cmd}'" -show-icons -font "Hack Nerd Font 14"
 
 # rofi clipboard tool
-bindsym $mod+c exec --no-startup-id rofi -modi "clipboard:greenclip print" -show clipboard
+bindsym $sup+v exec --no-startup-id rofi -modi "clipboard:greenclip print" -show clipboard
 
 # rofi emoji picker
 bindsym $sup+period exec --no-startup-id rofi -modi emoji -show emoji -emoji-mode copy
