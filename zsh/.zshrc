@@ -22,3 +22,6 @@ setopt autocd extendedglob nomatch notify
 unsetopt beep
 bindkey -v
 # End of lines configured by zsh-newuser-install
+
+#export NVM_DIR="$HOME/.nvm"
+#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
