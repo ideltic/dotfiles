@@ -1,4 +1,4 @@
-export PATH="$PATH:$HOME/.cargo/bin:$HOME/.local/bin"
+export PATH="$PATH:$HOME/.cargo/bin:$HOME/.local/bin:$HOME/.nvm/versions/node/*/bin"
 export EDITOR="nvim"
 export TERMINAL="wezterm"
 export GTK_THEME='Catppuccin-Macchiato-Standard-Pink-Dark:dark'
@@ -22,6 +22,7 @@ alias c='clear'
 alias cdc='cd && clear'
 alias cl='clear && ls -al'
 alias closedc='bash $HOME/.config/sh/pkill-discord.sh'
+alias cnode='clear && node'
 alias e='exit'
 alias l="ls -al"
 alias natalie="btm && echo 🥺"
