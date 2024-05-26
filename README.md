@@ -6,9 +6,7 @@ pretty self explanatory
 
 ### features
 
-- distro: **endeavouros *(against my will)***
-
-- terminal: **[wezterm](https://github.com/wez/wezterm) or [konsole](https://github.com/KDE/konsole)**
+- terminal: **[konsole](https://github.com/KDE/konsole) or [wezterm](https://github.com/wez/wezterm)**
 
 - de: **KDE Plasma 6**
 
@@ -18,9 +16,9 @@ pretty self explanatory
 
 - shell: **[zsh](https://www.zsh.org/)**
 
-- bootloader: **rEFInd**
+- bootloader: **grub**
 
-- theme: **[catppuccin](https://github.com/catppuccin/)**
+- overall theme: **[catppuccin](https://github.com/catppuccin/)**
 
 i3 and sway configs are available in .config/archive
 
