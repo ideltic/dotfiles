@@ -1,11 +1,11 @@
 # open file manager (thunar)
 bindsym $sup+e exec thunar
 
-# launch wezterm (terminal)
-bindsym $mod+Return exec wezterm
+# launch konsole (terminal)
+bindsym $mod+Return exec konsole
 
-# launch konsole (other terminal)
-bindsym $mod+Shift+Return exec konsole
+# launch wezterm (other terminal)
+bindsym $mod+Shift+Return exec wezterm
 
 # launch cool-retro-term (other terminal)
 bindsym $mod+Control+Return exec cool-retro-term
