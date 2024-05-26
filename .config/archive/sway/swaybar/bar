@@ -7,7 +7,7 @@ bar {
     height 24
     position bottom
     
-    status_command sh ~/.dotfiles/.config/sway/swaybar/statuscmd.sh;
+    status_command sh ~/.config/sway/swaybar/statuscmd.sh;
 
     colors {
         background         $base

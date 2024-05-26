@@ -14,7 +14,7 @@ floating_modifier $mod normal
 bindsym $mod+Shift+c reload
 
 # Exit sway (logs you out of your Wayland session)
-bindsym $sup+Shift+e exec wlogout -C $HOME/.dotfiles/.config/wlogout/style.css -l $HOME/.dotfiles/.config/wlogout/layout
+bindsym $sup+Shift+e exec wlogout -C $HOME/.config/wlogout/style.css -l $HOME/.config/wlogout/layout
 
 
 include $HOME/.config/sway/appearance/catppuccin

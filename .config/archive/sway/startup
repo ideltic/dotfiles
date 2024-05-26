@@ -1,5 +1,5 @@
 # use wbg to set a wallpaper
-exec_always wbg ~/Pictures/backgrounds/peaks.png
+exec_always wbg ~/pictures/backgrounds/peaks.png
 
 # starts autotiling-rs
 exec autotiling-rs
