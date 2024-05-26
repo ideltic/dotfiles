@@ -23,17 +23,19 @@ button {
     border-color: var(--surface0);
 	text-decoration-color: var(--text);
     color: var(--text);
-	background-color: var(--mantle);
+	/* background-color: var(--mantle); */
 	border-style: solid;
 	border-width: 1px;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 25%;
-}
 
-button:focus, button:active, button:hover {
-	background-color: var(--accent-color);
-	outline-style: none;
+	&:focus,
+	&:active,
+	&:hover {
+		background-color: var(--accent-color) !important;
+		outline-style: none !important;
+	}
 }
 
 #lock {
