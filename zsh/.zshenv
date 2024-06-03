@@ -1,7 +1,6 @@
 export PATH="$PATH:$HOME/.cargo/bin:$HOME/.local/bin:$HOME/.nvm/versions/node/*/bin"
 export EDITOR="nvim"
 export TERMINAL="wezterm"
-export GTK_THEME='Catppuccin-Macchiato-Standard-Pink-Dark:dark'
 
 # dont remember what this does tbh
 export LIBGL_ALWAYS_INDIRECT=0
