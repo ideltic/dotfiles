@@ -1,6 +1,7 @@
 format = """
 $username\
 $hostname\
+$line_break\
 $directory\
 $git_branch\
 $git_state\
@@ -9,7 +10,7 @@ $python\
 $character"""
 
 [directory]
-style = "blue"
+style = "cyan"
 
 [character]
 success_symbol = "[❯](purple)"
@@ -17,7 +18,7 @@ error_symbol = "[❯](red)"
 vimcmd_symbol = "[❮](green)"
 
 [git_branch]
-format = "[$branch]($style)"
+format = "on [$branch]($style)"
 style = "bright-black"
 
 [git_status]
