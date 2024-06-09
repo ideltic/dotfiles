@@ -23,6 +23,7 @@ alias cl='clear && ls -al'
 alias closedc='bash $HOME/.config/sh/pkill-discord.sh'
 alias cnode='clear && node'
 alias e='exit'
+alias init='node src/index.js'
 alias l="ls -al"
 alias natalie="btm && echo 🥺"
 alias playing="playerctl metadata --format '{{artist}} - {{ title}}'"
