@@ -14,6 +14,7 @@ bold=$(tput bold)
 normal=$(tput sgr0)
 
 # random aliases
+alias ff='clear && fastfetch -c ~/.config/fastfetch.jsonc'
 alias gae='clear && hyfetch'
 alias meow='cat ~/Documents/meow'
 alias neofetch='clear && neofetch'
