@@ -42,4 +42,4 @@ alias sysrq="cat /proc/sys/kernel/sysrq"
 alias vencordinstall="sh ~/.config/sh/vencordinstall.sh"
 alias vim='nvim'
 alias update="sudo pacman -Syu"
-alias updatepoweroff="sudo pacman -Syu --noconfirm ; sleep 0.1 ; echo -e '\n${bold}System updates complete.${normal}\n' ; sleep 3 ; yay --noconfirm ; sleep 0.1 ; echo -e '\n${bold}AUR updates complete.${normal}\n' ; sleep 3 ; echo -e '\n${GREEN}${bold}All updates complete. Powering off now...${TEXT}${normal}\n' ; sleep 5 ; echo 'systemctl poweroff'"
+alias updatepoweroff="sudo pacman -Syu --noconfirm ; sleep 0.1 ; echo -e '\n${bold}System updates complete.${normal}\n' ; sleep 3 ; yay --noconfirm ; sleep 0.1 ; echo -e '\n${bold}AUR updates complete.${normal}\n' ; sleep 3 ; echo -e '\n${GREEN}${bold}All updates complete. Powering off now...${TEXT}${normal}\n' ; sleep 5 ; systemctl poweroff"
