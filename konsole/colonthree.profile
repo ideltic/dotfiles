@@ -4,7 +4,7 @@ Font=JetBrainsMono Nerd Font Mono,10,-1,5,600,0,0,0,0,0,0,0,0,0,0,1,SemiBold
 
 [Cursor Options]
 CursorShape=2
-CustomCursorColor=245,189,230
+CustomCursorColor=244,219,214
 UseCustomCursorColor=true
 
 [General]
