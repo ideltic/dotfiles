@@ -16,6 +16,8 @@ TerminalMargin=6
 TerminalRows=24
 
 [Scrolling]
+HistoryMode=2
+HistorySize=4000
 ScrollBarPosition=2
 
 [Terminal Features]
