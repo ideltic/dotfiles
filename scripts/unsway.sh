@@ -17,7 +17,7 @@ wm_uninstall() {
     echo -ne "Uninstalling window manager..\r" && sleep 1
     echo -ne "Uninstalling window manager...\r" && sleep 1 && echo
 
-    sudo pacman -Rnsu --noconfirm autotiling-rs cliphist fuzzel grim slurp swayfx swaync swayimg thunar bemoji swayosd-git wbg wl-clip-persist-git && sleep 2
+    sudo pacman -Rnsu --noconfirm autotiling-rs cliphist fuzzel grim slurp swayfx swaync swayimg thunar bemoji-git swayosd-git wbg wl-clip-persist-git && sleep 2
 
     echo -e "\n${GREEN}${bold}Window manager successfully uninstalled.${TEXT}${normal}\n"
     sleep 3
