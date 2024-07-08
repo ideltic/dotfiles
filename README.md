@@ -6,7 +6,7 @@ pretty self explanatory
 
 ### features
 
-- terminal: **[konsole](https://github.com/KDE/konsole) or [wezterm](https://github.com/wez/wezterm)**
+- terminal: **[konsole](https://github.com/KDE/konsole)**
 
 - de: **KDE Plasma 6**
 
@@ -16,10 +16,10 @@ pretty self explanatory
 
 - shell: **[zsh](https://www.zsh.org/)**
 
-- bootloader: **grub**
+- bootloader: **refind**
 
 - overall theme: **[catppuccin](https://github.com/catppuccin/)**
 
 i3 and sway configs are available in .config/archive
 
-**the install script currently assumes that you will be using swaywm instead of KDE plasma, i do *not* recommend running it**
+**to install, simply run `install.sh` found in the scripts folder :3**
