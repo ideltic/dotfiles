@@ -1,4 +1,4 @@
-#! /usr/bin/env bash
+#!/usr/bin/env bash
 
 BLACK="\033[30m"
 RED="\033[31m"
@@ -12,108 +12,135 @@ TEXT="\033[0;39m"
 bold=$(tput bold)
 normal=$(tput sgr0)
 
-function yay_install {
-     echo -ne "Installing yay.\r" && sleep 1
-     echo -ne "Installing yay..\r" && sleep 1
-     echo -ne "Installing yay...\r" && sleep 1 && echo
+function yayInstall {
+    echo -ne "${bold}Installing yay.\r" && sleep 1
+    echo -ne "Installing yay..\r" && sleep 1
+    echo -ne "Installing yay...\r\n${normal}" && sleep 1.5
 
-     sudo pacman -Syu --noconfirm --needed base-devel git
-     git clone https://aur.archlinux.org/yay.git /home/$USER/yay && cd /home/$USER/yay
-     makepkg -si
-     cd ..
-     rm -rf /home/$USER/yay
+    sudo pacman -S --noconfirm --needed base-devel git
+    git clone --quiet https://aur.archlinux.org/yay.git $HOME/yay && cd $HOME/yay
+    makepkg -si --noconfirm
+    cd $HOME
+    rm -rf $HOME/yay
 
-     echo
-     echo -e "${GREEN}${bold}Yay successfully installed.${TEXT}${normal}"
-     sleep 3 && echo
-} 
-
-function wm_install {
-     echo -ne "Installing window manager.\r" && sleep 1
-     echo -ne "Installing window manager..\r" && sleep 1
-     echo -ne "Installing window manager...\r" && sleep 1 && echo
-     
-     #echo "2" | sudo pacman -S --needed --noconfirm autotiling-rs brightnessctl cliphist fuzzel gnome-keyring grim pamixer pavucontrol pipewire pipewire-audio pipewire-pulse plymouth qt5-wayland qt6-wayland rust sddm slurp swayimg swaylock thunar waybar wayland wl-clipboard xorg-xwayland
-     #yay -S --noconfirm --needed bemoji swayfx swaync swayosd-git ttf-twemoji wbg wl-clip-persist-git
-
-     echo
-     echo -e "${GREEN}${bold}Window manager installation complete.${TEXT}${normal}"
-     sleep 3 && echo
+    echo
+    echo -e "\n${bold}Yay successfully installed!\n${normal}" && sleep 3
 }
 
-function pkg_install {
-     echo -ne "Installing needed packages.\r" && sleep 1
-     echo -ne "Installing needed packages..\r" && sleep 1
-     echo -ne "Installing needed packages...\r" && sleep 1 && echo
+function chaur {
+    sudo echo ""
+    clear
+    echo -ne "${bold}\nSetting up chaotic AUR.\r" && sleep 1
+    echo -ne "Setting up chaotic AUR..\r" && sleep 1
+    echo -ne "Setting up chaotic AUR...\r\n${normal}" && sleep 1.5
 
-     #echo "2" | sudo pacman -S --needed --noconfirm bitwarden bottom code discord firefox hyfetch kitty lxappearance neofetch neovim p7zip pacman-contrib playerctl seahorse starship udiskie uwufetch vlc wezterm wezterm-shell-integration wezterm-terminfo
-     #yay -S --noconfirm --needed prismlauncher-qt5-bin
-     
-     echo
-     echo -e "${GREEN}${bold}Package installation complete.${TEXT}${normal}"
-     sleep 3 && echo
+    sudo pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com && sleep 0.5
+    sudo pacman-key --lsign-key 3056513887B78AEB && sleep 0.5
+    sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' --noconfirm && sleep 0.5
+    sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst' --noconfirm && sleep 0.5
+
+    echo -e '\n[chaotic-aur]
+    Include = /etc/pacman.d/chaotic-mirrorlist ' | sudo tee -a /etc/pacman.conf && sleep 0.5
+
+    echo -e "\n\n${bold}Chaotic AUR successfully installed!\n${normal}" && sleep 3
 }
 
-function symlinks {
-     echo -ne "Creating symbolic links.\r" && sleep 1
-     echo -ne "Creating symbolic links..\r" && sleep 1
-     echo -ne "Creating symbolic links...\r" && sleep 1 && echo
+function pkgInstall {
+    echo -ne "${bold}Installing packages.\r" && sleep 1
+    echo -ne "Installing packages..\r" && sleep 1
+    echo -ne "Installing packages.\r\n${normal}" && sleep 1.75
 
-     # creating dotfiles directory, removing original gitclone
-     #mkdir -v ~/.dotfiles && mv -v ~/dotfiles/* ~/.dotfiles && mv -v ~/dotfiles/.* ~/.dotfiles && sleep 0.1
-     #cd ~/.dotfiles && rm -rfv ~/dotfiles && sleep 0.4
+    sudo pacman -S --noconfirm --needed sddm plasma
+    sudo pacman -S --noconfirm --needed bottom cmatrix code discord dolphin firefox hyfetch gwenview konsole neofetch neovim premid prismlauncher slack-desktop spectacle uwufetch zsh
 
-     # symlinking new configurations
-     #rm -rfv ~/.config/fuzzel && ln -sfv ~/.dotfiles/.config/fuzzel/ ~/.config/ && sleep 0.1
-     #rm -rfv ~/.config/hyfetch.json && ln -sfv ~/.dotfiles/.config/hyfetch.json ~/.config/ && sleep 0.1
-     #rm -rfv ~/.config/kitty && ln -sfv ~/.dotfiles/.config/kitty/ ~/.config/ && sleep 0.1
-     #rm -rfv ~/.config/neofetch && ln -sfv ~/.dotfiles/.config/neofetch/ ~/.config/ && sleep 0.1
-     #rm -rfv ~/.config/nvim && ln -sfv ~/.dotfiles/.config/nvim/ ~/.config/ && sleep 0.1
-     #rm -rfv ~/.config/qt5ct && ln -sfv ~/.dotfiles/.config/qt5ct/ ~/.config/ && sleep 0.1
-     #rm -rfv ~/.config/starship.toml && ln -sfv ~/.dotfiles/.config/starship.toml ~/.config/ && sleep 0.1
-     #rm -rfv ~/.config/sway && ln -sfv ~/.dotfiles/.config/sway/ ~/.config/ && sleep 0.1
-     #rm -rfv ~/.config/swayimg && ln -sfv ~/.dotfiles/.config/swayimg/ ~/.config/ && sleep 0.1
-     #rm -rfv ~/.config/swaync && ln -sfv ~/.dotfiles/.config/swaync/ ~/.config/ && sleep 0.1
-     #rm -rfv ~/.config/swayosd && ln -sfv ~/.dotfiles/.config/swayosd ~/.config/ && sleep 0.1
-     #rm -rfv ~/.config/systemd && ln -sfv ~/.dotfiles/.config/systemd ~/.config/ && sleep 0.1
-     #rm -rfv ~/.config/uwufetch && ln -sfv ~/.dotfiles/.config/uwufetch ~/.config/ && sleep 0.1
-     #rm -rfv ~/.config/waybar && ln -sfv ~/.dotfiles/.config/waybar/ ~/.config/ && sleep 0.1
-     #rm -rfv ~/.config/wlogout && ln -sfv ~/.dotfiles/.config/wlogout ~/.config/ && sleep 0.1
-     #rm -fv ~/.bashrc && ln -sfv ~/.dotfiles/.bashrc ~/.bashrc && sleep 0.1
-     #rm -fv ~/.wezterm.lua && ln -sfv ~/.dotfiles/.wezterm.lua ~/.wezterm.lua && sleep 0.1
-     #rm -rfv ~/.local/share/fonts && ln -sfv ~/.dotfiles/fonts/ ~/.local/share/ && sleep 0.1
-     #sudo rm -rfv /etc/greetd/* && sudo cp -v ~/.dotfiles/greetd/config.toml /etc/greetd/ && sudo cp -v ~/.dotfiles/greetd/sway-config /etc/greetd/ && sleep 0.1
-     #sudo cp -v ~/.dotfiles/backgrounds/fuji.png /etc/greetd/ && sudo cp -v ~/.dotfiles/.config/sway/appearance/catppuccin /etc/greetd/ && sleep 0.1
-     #mkdir -pv ~/Pictures/backgrounds && ln -sfv ~/.dotfiles/backgrounds ~/Pictures/backgrounds && sleep 0.1
-     #ln -sfv ~/.dotfiles/fonts ~/.local/share/fonts
-     #ln -sfv ~/.dotfiles/sh ~/.config/
-
-     cd ~
-     echo
-     echo -e "${GREEN}${bold}Symlinking complete.${TEXT}${normal}"
-     sleep 3 && echo
+    echo -ne "\n${bold}Packages successfully installed!\n${normal}" && sleep 3
 }
 
-#while :
-#do
-## stolen from: https://askubuntu.com/a/970898
-## non-root commands must be run as:
-## `sudo -u $real_user <command>`
-#if ! [ $(id -u) = 0 ]; then
-#   echo "The script need to be run as root." >&2
-#   exit 1
-#fi
-#
-#if [ $SUDO_USER ]; then
-#    real_user=$SUDO_USER
-#else
-#    real_user=$(whoami)
-#fi
-#
-#done
+function symlink {
+    echo -ne "${bold}Symlinking config directories.\r" && sleep 1
+    echo -ne "Symlinking config directories..\r" && sleep 1
+    echo -ne "Symlinking config directories...\r\n${normal}" && sleep 1.5
 
+    # removing already existing configs
+    rm -rfv ~/.config/neofetch && sleep 0.1
+    rm -rfv ~/.config/uwufetch && sleep 0.1
+    rm -rfv ~/.config/gtk-2.0 && sleep 0.1
+    rm -rfv ~/.config/gtk-3.0 && sleep 0.1
+    rm -rfv ~/.config/qt5ct && sleep 0.1
+    rm -rfv ~/.local/share/fonts && sleep 0.1
+    rm -rfv ~/.local/share/konsole && sleep 0.1
+    rm ~/.config/fastfetch.jsonc && sleep 0.1
+    rm ~/.config/hyfetch.json && sleep 0.1
+    rm ~/.config/starship.toml && sleep 0.5
 
-clear
+    # symlinking new configs
+    mkdir --parents --verbose ~/projects/scripts && sleep 0.1
+    ln -sfv ~/.dotfiles/scripts ~/projects/scripts && sleep 0.1
+    ln -sfv ~/.dotfiles/.config/neofetch ~/.config/ && sleep 0.1
+    ln -sfv ~/.dotfiles/.config/uwufetch ~/.config/ && sleep 0.1
+    ln -sfv ~/.dotfiles/.config/sh ~/.config/ && sleep 0.1
+    ln -sfv ~/.dotfiles/.config/gtk-2.0 ~/.config/ && sleep 0.1
+    ln -sfv ~/.dotfiles/.config/gtk-3.0 ~/.config/ && sleep 0.1
+    ln -sfv ~/.dotfiles/.config/qt5ct ~/.config/ && sleep 0.1
+    ln -sfv ~/.dotfiles/fonts ~/.local/share/fonts && sleep 0.1
+    ln -sfv ~/.dotfiles/.konsole ~/.local/share/konsole && sleep 0.1
+    ln -sfv ~/.dotfiles/.config/fastfetch.jsonc ~/.config/ && sleep 0.1
+    ln -sfv ~/.dotfiles/.config/hyfetch.json ~/.config/ && sleep 0.1
+    ln -sfv ~/.dotfiles/.config/starship.toml ~/.config/ && sleep 0.1
+    ln -sfv ~/.dotfiles/zsh/.zprofile ~/.zprofile && sleep 0.1
+    ln -sfv ~/.dotfiles/zsh/.zshenv ~/.zshenv && sleep 0.1
+    ln -sfv ~/.dotfiles/zsh/.zshrc ~/.zshrc && sleep 0.1
+    ln -sfv ~/.dotfiles/zsh/.zshrc.zni ~/.zshrc.zni && sleep 0.1
+    ln -sf ~/.dotfiles/.gitconfig ~/.gitconfig && sleep 0.8
+
+    sudo rm -rfv /root/.config/neofetch && sleep 0.1
+    sudo rm /root/hyfetch.json && sleep 0.1
+    sudo rm /root/starship.toml && sleep 0.3
+
+    sudo ln -sfv ~/.dotfiles/root/neofetch /root/.config/ && sleep 0.1
+    sudo ln -sfv ~/.dotfiles/root/hyfetch.json /root/.config/ && sleep 0.1
+    sudo ln -sfv ~/.dotfiles/root/starship.toml /root/.config/ && sleep 0.5
+
+    echo -ne "\n${bold}Symlinking complete!\n${normal}" && sleep 3
+
+}
+
+function renameHomeDirs {
+    echo -ne "${bold}Renaming home directories.\r" && sleep 1
+    echo -ne "Renaming home directories..\r" && sleep 1
+    echo -ne "Renaming home directories...\r" && sleep 1
+    echo -ne "Renaming home directories... because why not\r${normal}" && sleep 2
+
+    mv -v ~/Desktop ~/desktop && sleep 0.1
+    mv -v ~/Documents ~/documents && sleep 0.1
+    mv -v ~/Downloads ~/downloads && sleep 0.1
+    mv -v ~/Music ~/music && sleep 0.1
+    mv -v ~/Pictures ~/pictures && sleep 0.1
+    mv -v ~/Public ~/public && sleep 0.1
+    mv -v ~/Templates ~/templates && sleep 0.1
+    mv -v ~/Videos ~/videos && sleep 0.5
+
+    echo -ne "\n${bold}Home directories renamed!\n${normal}" && sleep 3
+}
+
+function sddmTheme {
+    sudo echo -ne "\n${bold}Installing SDDM theme.\r" && sleep 1
+    echo -ne "Installing SDDM theme..\r" && sleep 1
+    echo -ne "Installing SDDM theme...\r" && sleep 1.5
+
+    sudo cp -rv ~/.dotfiles/sddm/catppuccin-custom /usr/share/sddm/themes/ && sleep 0.3
+    echo -e "
+[Theme]
+Current=catppuccin-custom" | sudo tee -a /etc/sddm.conf && sleep 0.3
+
+    echo -ne "\n${bold}SDDM successfully themed!\n${normal}" && sleep 3
+}
+
+###
+###     actual beginning of script
+###
+
+sudo clear
 
 echo -e "${PINK}${bold}
   _   _       _______       _      _____ ______ 
@@ -131,29 +158,20 @@ ${normal}${TEXT}
 " && sleep 0.1
 echo -e "          ${bold}${CYAN}---===${PINK}=====${WHITE}=====${PINK}=====${CYAN}===---" && echo
 echo -e "${WHITE}${bold}'Natalie Setup' by Natalie :3 (https://github.com/Nyatalieeee)" && echo
-echo -e "${TEXT}${normal}Running this script will install, configure, and then apply the Catppuccin theme to all necessary packages." && echo
+echo -e "${TEXT}${normal}Running this script will install and configure all necessary packages." && echo
 
 sleep 5 && cd
 
-# yay installation
-yay_install
+yayInstall
 
-# window manager installation
-#wm_install
+chaur
 
-# installing other needed packages
-#pkg_install
+pkgInstall
 
-# creating symlinks
-#symlinks
+symlink
 
-catppuccinify
+renameHomeDirs
 
-# [USE THIS: https://wiki.archlinux.org/title/Uniform_look_for_Qt_and_GTK_applications]
+sddmTheme
 
-#sudo systemctl enable greetd.service && sleep 0.1
-#sudo systemctl enable systemd-resolved.service && sleep 0.15
-
-clear && hyfetch
-
-echo -e "${GREEN}${bold}Installation complete! You may now reboot into your new setup.${TEXT}${normal}" && echo
+echo -e "\n${GREEN}${bold}Installation complete! You may now reboot into your new setup.${TEXT}${normal}\n"
