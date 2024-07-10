@@ -48,10 +48,21 @@ function chaur {
 function pkgInstall {
     echo -ne "${bold}Installing packages.\r" && sleep 1
     echo -ne "Installing packages..\r" && sleep 1
-    echo -ne "Installing packages.\r\n${normal}" && sleep 1.75
+    echo -ne "Installing packages...\r\n${normal}" && sleep 1.75
 
     sudo pacman -S --noconfirm --needed sddm plasma
     sudo pacman -S --noconfirm --needed bottom cmatrix code discord dolphin firefox hyfetch gwenview konsole neofetch neovim premid prismlauncher slack-desktop spectacle uwufetch zsh
+
+    if [ ! -d /usr/share/icons/Papirus-Dark/ ]
+    then
+        echo -e "\nPapirus icon theme not found. Installing..." && sleep 3 && echo ""
+        sudo pacman -S --noconfirm --needed papirus-icon-theme
+        yay -S --noconfirm --needed papirus-folders-catppuccin-git
+        papirus-folders -C cat-macchiato-pink --theme Papirus-Dark
+        gsettings set org.gnome.desktop.interface icon-theme 'Papirus-Dark'
+    else
+        echo -e "\nPapirus icon theme already installed. Skipping..." && sleep 3 && echo ""
+    fi
 
     echo -ne "\n${bold}Packages successfully installed!\n${normal}" && sleep 3
 }
@@ -129,6 +140,7 @@ function sddmTheme {
     echo -ne "Installing SDDM theme...\r" && sleep 1.5
 
     sudo cp -rv ~/.dotfiles/sddm/catppuccin-custom /usr/share/sddm/themes/ && sleep 0.3
+    sudo rm -f /etc/sddm.conf
     echo -e "
 [Theme]
 Current=catppuccin-custom" | sudo tee -a /etc/sddm.conf && sleep 0.3
