@@ -184,7 +184,7 @@ symbol = "⨀ "
 style = "italic bright-yellow"
 
 [nodejs]
-format = " node [ ($version)](italic bright-green)"
+format = " node [󰫈 ($version)](italic bright-green)"
 detect_files = ["package-lock.json", "yarn.lock"]
 version_format = "${major}.${minor}"
 
@@ -202,14 +202,14 @@ style = "italic red"
 
 [rust]
 format = " rs [$symbol$version]($style)"
-symbol = "⊃ "
+symbol = "󱘗 "
 version_format = "${major}.${minor}"
 style = "italic red"
 
 [package]
 format = " pkg [$symbol$version]($style)"
 version_format = "${major}.${minor}"
-symbol = "◫ "
+symbol = "󰏖 "
 style = "bright-yellow italic"
 
 [swift]
@@ -228,7 +228,7 @@ symbol = "■ "
 format = " buf [$symbol $version $buf_version]($style)"
 
 [c]
-symbol = "∁ "
+symbol = " "
 format = " c [$symbol($version(-$name))]($style)"
 
 [conda]
@@ -260,8 +260,9 @@ symbol = "❯λ "
 format = " hs [$symbol($version )]($style)"
 
 [java]
-symbol = "∪ "
+symbol = " "
 format = " java [${symbol}(${version} )]($style)"
+style = "bold blue"
 
 [julia]
 symbol = "◎ "
