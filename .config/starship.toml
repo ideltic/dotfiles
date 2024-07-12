@@ -91,7 +91,7 @@ add_newline = true
 
 [character]
 format = "$symbol "
-success_symbol = "[ᐳ](bold purple)"
+success_symbol = "[-->](bold purple)"
 error_symbol = "[](bold red)"
 
 [env_var.VIMSHELL] # vim subshell
@@ -100,7 +100,7 @@ style = 'green italic'
 
 [sudo]
 format = "[$symbol]($style)"
-style = "italic bright-purple"
+style = "italic bold purple"
 symbol = "◇┈"
 disabled = false
 
@@ -115,7 +115,7 @@ home_symbol = "~"
 truncation_length = 3
 truncation_symbol = "../"
 read_only = " "
-style = "italic blue"
+style = "italic cyan"
 format = ' [$path]($style)[$read_only]($read_only_style)'
 
 [cmd_duration]
