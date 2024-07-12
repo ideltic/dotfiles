@@ -75,8 +75,6 @@ function symlink {
     # removing already existing configs
     rm -rfv ~/.config/neofetch && sleep 0.1
     rm -rfv ~/.config/uwufetch && sleep 0.1
-    rm -rfv ~/.config/gtk-2.0 && sleep 0.1
-    rm -rfv ~/.config/gtk-3.0 && sleep 0.1
     rm -rfv ~/.config/qt5ct && sleep 0.1
     rm -rfv ~/.local/share/fonts && sleep 0.1
     rm -rfv ~/.local/share/konsole && sleep 0.1
@@ -90,8 +88,6 @@ function symlink {
     ln -sfv ~/.dotfiles/.config/neofetch ~/.config/ && sleep 0.1
     ln -sfv ~/.dotfiles/.config/uwufetch ~/.config/ && sleep 0.1
     ln -sfv ~/.dotfiles/.config/sh ~/.config/ && sleep 0.1
-    ln -sfv ~/.dotfiles/.config/gtk-2.0 ~/.config/ && sleep 0.1
-    ln -sfv ~/.dotfiles/.config/gtk-3.0 ~/.config/ && sleep 0.1
     ln -sfv ~/.dotfiles/.config/qt5ct ~/.config/ && sleep 0.1
     ln -sfv ~/.dotfiles/fonts ~/.local/share/fonts && sleep 0.1
     ln -sfv ~/.dotfiles/.konsole ~/.local/share/konsole && sleep 0.1
