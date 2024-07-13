@@ -37,6 +37,7 @@ alias gp='git pull --rebase'
 alias l="ls -al"
 alias natalie="btm && echo 🥺"
 alias playing="playerctl metadata --format '{{artist}} - {{ title}}'"
+alias playlist-dl='sh ~/projects/scripts/playlist-dl.sh'
 alias pubip="curl https://ipv4.icanhazip.com"
 alias pwease="sudo"
 alias sysrq="cat /proc/sys/kernel/sysrq"
