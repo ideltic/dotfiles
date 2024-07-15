@@ -35,7 +35,7 @@ echo -ne "${bold}Beginning download.\r" && sleep 1
 echo -ne "Beginning download..\r" && sleep 1
 echo -ne "Beginning download...\r${normal}" && sleep 1.25 && echo -e "\n"
 
-yt-dlp --yes-playlist --newline --extract-audio --audio-format mp3 --audio-quality 4 -o '%(title)s.%(ext)s' $URL
+yt-dlp --yes-playlist --newline --extract-audio --restrict-filenames --audio-format mp3 --audio-quality 4 -o '%(title)s.%(ext)s' $URL
 
 sleep 0.4
 
