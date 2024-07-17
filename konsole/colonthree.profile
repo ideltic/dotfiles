@@ -21,4 +21,5 @@ HistorySize=4000
 ScrollBarPosition=2
 
 [Terminal Features]
+BellMode=2
 BlinkingCursorEnabled=false
