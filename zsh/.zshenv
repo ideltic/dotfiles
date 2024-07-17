@@ -34,6 +34,7 @@ alias cnode='clear && node'
 alias c3init='node ~/projects/colon3-bot/src/index.js'
 alias e='exit'
 alias gp='git pull --rebase'
+alias gpall="sh ~/projects/scripts/gitpullall.sh"
 alias l="ls -al"
 alias natalie="btm && echo 🥺"
 alias playing="playerctl metadata --format '{{artist}} - {{ title}}'"
