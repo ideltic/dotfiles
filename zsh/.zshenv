@@ -1,5 +1,6 @@
-export PATH="$PATH:$HOME/.cargo/bin:$HOME/.local/bin:$HOME/.nvm/versions/node/*/bin"
+export PATH="$PATH:$HOME/.cargo/bin:$HOME/.local/bin:$N_PREFIX/bin"
 export EDITOR="code"
+export N_PREFIX="$HOME/.local/share/n"
 export TERMINAL="konsole"
 
 # dont remember what this does tbh
