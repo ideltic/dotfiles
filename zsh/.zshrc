@@ -1,6 +1,6 @@
 eval "$(starship init zsh)"
 
-neofetch
+ff
 
 # The following lines were added by compinstall
 
