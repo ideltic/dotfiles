@@ -1,8 +1,0 @@
-[Unit]
-Description=Watch /dev/v4l/by-id/usb-Chicony_Electronics_Co._Ltd._HD_WebCam_0001-video-index0 and restore controls
-
-[Path]
-PathExists=/dev/v4l/by-id/usb-Chicony_Electronics_Co._Ltd._HD_WebCam_0001-video-index0
-
-[Install]
-WantedBy=paths.target
